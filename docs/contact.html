@@ -6,13 +6,13 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Programming, CPU, Website, Developer, Java, C++, Guitar, Gypsy Jazz, Beatles, Flamenco, San Francisco">
     <meta name="author" content="Scott Feichter">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <meta http-equiv="refresh" content="30">-->
+    <meta http-equiv="refresh" content="30">
 
     <title>Scott Feichter</title>
     <!--  <base href="https://www.scottfeichter.com" target="_blank">-->
 
-    <link rel="stylesheet" href="/_css/portfolio.css">
-    <script src="/_js/portfolio.js"></script>
+    <link rel="stylesheet" href="/_css/contact.css">
+    <script src="/_js/contact.js"></script>
 </head>
 
 <!---------------------------------------------------BODY------------------------------------------------------------->
@@ -30,36 +30,56 @@
 
         <nav>
             <ul>
-                <li><a href="home.html">home</a></li>
+                <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about</a></li>
-                <li><a href="portfolio.html" class="active">portfolio</a></li>
-                <li><a href="contact.html">contact</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="contact.html" class="active">contact</a></li>
             </ul>
         </nav>
     </div>
 
 
-    <!---------------------------------------------------Rye------------------------------------------------------------->
+    <!---------------------------------------------------Contact------------------------------------------------------------->
 
-    <div class="Rye">
-        <iframe
-                width="560" height="315"
-                src="https://www.youtube.com/embed/vYJnA026QB0"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
+    <div class="Contact">
+        <h1>Contact Me</h1>
+        <hr>
+        <h3>415-702-8512</h3>
+        <h3>scottfeichter@gmail.com</h3>
+    </div>
+
+    <!---------------------------------------------------Form------------------------------------------------------------->
+
+    <div class="Form">
+        <h2>send a message</h2>
+        <form>
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="555-555-5555.." pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="canada">United States</option>
+                <option value="canada">Canada</option>
+                <option value="canada">United Kingdom</option>
+                <option value="canada">Australia</option>
+                <option value="canada">New Zealand</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
     </div>
 
     <!---------------------------------------------------------------------------------------------------------------->
 
     <div class="">
 
-    </div>
-
-    <!---------------------------------------------------------------------------------------------------------------->
-
-    <div class="">
 
     </div>
 
