@@ -1,0 +1,192 @@
+body {
+    font-family: Georgia, Verdana, sans-serif ;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+}
+/*---------------------------------------------.container--------------------------------------------------------*/
+
+.container {  display: grid;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 200px 100px 100px 100px 10px 100px 100px;
+    grid-template-rows:
+            100px
+            50px
+            50px
+            50px
+            160px
+            50px
+            35px
+            35.3px
+            164.7px
+            70px
+            0px
+            10px;
+    grid-template-areas:
+    "Header Header Header Header Header Header Header Header Header Header Header . . "
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
+    ". . . . . . . . . . . . ."
+    "Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer . . . ";
+}
+
+/*.container > div {border: darkred dotted 4px}*/
+
+/*---------------------------------------------Header--------------------------------------------------------*/
+.Header { grid-area: Header; }
+
+nav {
+    /*border-top: solid black 1px;*/
+    /*border-bottom: solid black 1px;*/
+    margin: 1rem auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+}
+
+nav li {
+    display: inline-block;
+    border-right: solid grey 1px;
+
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    background-color: royalblue;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+/*nav a:link {*/
+/*    background-color: royalblue;*/
+/*    color: white;*/
+
+/*}*/
+
+nav a:focus {
+    background-color: white;
+    color: royalblue;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+.active {
+    background-color: transparent;
+    color: royalblue;
+    border-right: solid black 1px;
+    border-left: solid black 1px;
+    border-top: solid black 1px;
+}
+
+/*
+5 Link States (must be in this order)
+
+:link = before visited
+:visited = after visited
+:focus = when selected
+:hover = on mouse hover
+:active = after clicked before loaded
+
+ */
+
+
+/*---------------------------------------------Contact--------------------------------------------------------*/
+.Contact {
+    grid-area: Contact;
+    /*border: red dotted 2px;*/
+}
+
+
+
+/*---------------------------------------------Form--------------------------------------------------------*/
+.Form {
+    grid-area: Form;
+    margin: 30px 20px 0px 80px;
+    /*border: green dotted 2px;*/
+}
+
+.Form h2 {
+    font-variant: small-caps;
+    text-align: center;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=tel], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 12px 20px;
+    margin-left: 150px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: black;
+    color: white;
+
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------Footer--------------------------------------------------------*/
+.Footer {
+    grid-area: Footer;
+    text-align: center;
+    /*border: orange dotted 2px;*/
+}
+
+#copyright {
+    font-size: 12px;
+}
