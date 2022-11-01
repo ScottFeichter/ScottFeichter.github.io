@@ -1,0 +1,173 @@
+body {
+    color: darkgoldenrod;
+}
+
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+}
+
+fieldset {
+    padding: 40px;
+    width: 600px;
+    height: 260px;
+    margin: 0 auto;
+    color: black;
+
+}
+
+#MemeGenerator {}
+
+label {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: darkgoldenrod;
+}
+
+#TopText {
+    margin-left: 58px;
+    margin-top: 30px;
+}
+
+#Address {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#BottomText {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+input {
+    border: solid lightgrey 2px;
+    line-height: 2em;
+}
+
+input:hover {
+    border: green dashed 2px;
+}
+
+input:active {
+    border: solid green 2px;
+}
+
+label:hover {
+    color: green;
+}
+
+label:focus-within {
+    color: blue;
+}
+
+.accesskey {
+    text-decoration: underline;
+}
+
+
+#Submit {
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 200px;
+    height: 60px;
+    font-size: 26px;
+    background-color: white;
+    border-color: black;
+    color: darkgoldenrod;
+}
+
+#Submit:hover {
+    color: white;
+    background-color: green;
+}
+
+#Submit:active {
+    color: blue;
+    background-color: white;
+}
+
+#removeButton {
+    /*margin-top: 30px;*/
+    /*margin-left: 200px;*/
+    margin: 0px auto 40px auto;
+    width: 200px;
+    height: 40px;
+    font-size: 26px;
+    background-color: white;
+    border-color: black;
+    color: darkgoldenrod;
+}
+
+#removeButton:hover {
+    color: white;
+    background-color: green;
+}
+
+#removeButton:active {
+    color: blue;
+    background-color: white;
+}
+
+#GeneratedMemes {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+
+#testImage {
+    border: dashed blue 1px;
+}
+
+
+.newMemeDiv {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.newMemeImage {
+    max-width: 400px;
+}
+
+.newMemeTopText {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    /*background: rgba(0, 0, 0, 0.1);*/
+    text-shadow: 2px 2px black;
+    max-width: 380px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.newMemeBottomText {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    /*background: rgba(0, 0, 0, 0.1);*/
+    text-shadow: 2px 2px black;
+    max-width: 380px;
+    word-break: break-word;
+    white-space: normal;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>SJF Meme Generator</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<h1>Meme Generator</h1>
+<h2>Use the form to generate a meme:</h2>
+
+<form id="MemeGenerator">
+    <fieldset>
+        <legend>Please Enter Your Information</legend>
+        <label for="TopText" accesskey="T">Enter Top Text:
+            <input id="TopText" type="text" placeholder="Rainy days and Mondays..."  size="50" autofocus> <br>
+        </label>
+        <label for="Address" accesskey="A">Enter Image Address:
+            <input id="Address" type="url" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/John_Denver_1974.jpg/330px-John_Denver_1974.jpg" size="50"> <br>
+        </label>
+        <label for="BottomText" accesskey="B">Enter Bottom Text:
+            <input id="BottomText" type="text" placeholder="Always make me high!" size="50">
+        </label>
+        <br>
+        <input id="Submit" type="submit" value="Submit" accesskey="S" size="30"> <br>
+
+    </fieldset>
+</form>
+<br>
+<br>
+<hr>
+
+<br>
+<h1>Yay! Memes!</h1>
+<h2>Here are the memes you made:</h2>
+
+<section id="GeneratedMemes">
+    <ul>
+
+    </ul>
+</section>
+
+
+<script src="index.js"></script>
+</body>
+</html>
