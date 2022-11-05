@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SJF Memory Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+            <h1>Welcome To Memory Game!</h1>
+    </div>
+
+
+    <div class="info">
+        <form id="player">
+            <fieldset>
+                <legend>Please Enter Your Information</legend><br>
+                <label for="name">Enter Your Name:</label>
+                <input id="name" type="text" placeholder="Ernst Blofeld" size="24"><br><br>
+                <label for="DOB">Enter Date Of Birth:</label>
+                <input id="DOB" type="date"><br><br>
+                <input id="submit" type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="controls">
+            <button id="start" type="button">Start</button>
+            <button id="reset" type="button">Reset</button>
+    </div>
+
+
+    <div class="current">
+        <fieldset>
+            <legend id="cs">Current Score</legend>
+            <div id="currentScoreBox">
+                <h4 id="currentScore" >00</h4>
+            </div>
+        </fieldset>
+
+
+    </div>
+
+
+    <div class="alltime">
+        <h4 id="All Time Leaders">All Time Leaders</h4>
+        <hr id="leadersLine">
+        <div id="ATLnamesDiv">
+            <ol id="ATLnamesOl">
+                <li>
+                    <ul class="subList"><p class="scoreP">Score: </p><p id="bestScore" class="scoreS">0</p></ul>
+                    <ul class="subList"><p class="nameP">Name: </p><p id="bestName" class="nameS">Joe Terd</p></ul>
+                    <ul class="subList"><p class="dateP">Date:  </p><p id="bestDate" class="dateS">11/01/80</p></ul>
+                </li><br>
+                <li>
+                    <ul class="subList"><p class="scoreP">Score: </p><p id="2nd" class="scoreS">0</p></ul>
+                    <ul class="subList"><p class="nameP">Name: </p><p id="2ndName" class="nameS">Joe Terd</p></ul>
+                    <ul class="subList"><p class="dateP">Date: </p><p id="2ndDate" class="dateS">11/01/80</p></ul>
+                </li><br>
+                <li>
+                    <ul class="subList"><p class="scoreP">Score: </p><p id="3rd" class="scoreS">0</p></ul>
+                    <ul class="subList"><p class="nameP">Name: </p><p id="3rdName" class="nameS">Joe Terd</p></ul>
+                    <ul class="subList"><p class="dateP">Date: </p><p id="3rdDate" class="dateS">11/01/80</p></ul>
+                </li><br>
+                <li>
+                    <ul class="subList"><p class="scoreP">Score: </p><p id="4th" class="scoreS">0</p></ul>
+                    <ul class="subList"><p class="nameP">Name: </p><p id="4thName" class="nameS">Joe Terd</p></ul>
+                    <ul class="subList"><p class="dateP">Date: </p><p id="4thDate" class="dateS">11/01/80</p></ul>
+                </li><br>
+                <li>
+                    <ul class="subList"><p class="scoreP">Score: </p><p id="5th" class="scoreS">0</p></ul>
+                    <ul class="subList"><p class="nameP">Name: </p><p id="5thName" class="nameS">Joe Terd</p></ul>
+                    <ul class="subList"><p class="dateP">Date: </p><p id="5thDate" class="dateS">11/01/80</p></ul>
+                </li><br>
+
+            </ol>
+        </div>
+
+    </div>
+
+
+
+    <div class="gameplay">
+        <form id="gameplayForm">
+            <button type="button" id="00" class="cardBack"></button>
+            <button type="button" id="01" class="cardBack"></button>
+            <button type="button" id="02" class="cardBack"></button>
+            <button type="button" id="03" class="cardBack"></button>
+            <button type="button" id="04" class="cardBack"></button>
+            <button type="button" id="05" class="cardBack"></button>
+            <button type="button" id="10" class="cardBack"></button>
+            <button type="button" id="11" class="cardBack"></button>
+            <button type="button" id="12" class="cardBack"></button>
+            <button type="button" id="13" class="cardBack"></button>
+            <button type="button" id="14" class="cardBack"></button>
+            <button type="button" id="15" class="cardBack"></button>
+            <button type="button" id="20" class="cardBack"></button>
+            <button type="button" id="21" class="cardBack"></button>
+            <button type="button" id="22" class="cardBack"></button>
+            <button type="button" id="23" class="cardBack"></button>
+            <button type="button" id="24" class="cardBack"></button>
+            <button type="button" id="25" class="cardBack"></button>
+        </form>
+    </div>
+
+
+
+    <div class="deck">
+        <h4 id="Your Deck">Your Current Deck</h4>
+        <hr id="yourdeckLine">
+        <div id="yourdeckImgDiv">
+            <img id="deckPic" src="png/Card%20Back%20copy.png">
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2 id="instructionsH2">Enter your info and click "Start" to begin!</h2>
+    </div>
+
+    <div class="footer">
+        <p id="copyright">Copyright &copy; Scott Feichter 2022</p>
+    </div>
+
+</div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
