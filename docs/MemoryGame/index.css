@@ -1,0 +1,296 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:
+            .5fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr
+            1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header header header header header header header header header"
+    "info info info controls controls controls controls current current current"
+    "info info info controls controls controls controls current current current"
+    "alltime alltime gameplay gameplay gameplay gameplay gameplay gameplay deck deck"
+    "alltime alltime gameplay gameplay gameplay gameplay gameplay gameplay deck deck"
+    "alltime alltime gameplay gameplay gameplay gameplay gameplay gameplay deck deck"
+    "alltime alltime gameplay gameplay gameplay gameplay gameplay gameplay deck deck"
+    "alltime alltime gameplay gameplay gameplay gameplay gameplay gameplay deck deck"
+    "instructions instructions instructions instructions instructions instructions instructions instructions instructions instructions"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+
+/*------------------------------------------grid areas-------------------------------------*/
+
+.header { grid-area: header; }
+
+.info {
+    grid-area: info;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls {
+    grid-area: controls;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current {
+    grid-area: current;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alltime {
+    grid-area: alltime;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+.gameplay {
+    grid-area: gameplay;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(jpg/tabletop.jpg);
+    border: solid black 8px;
+}
+
+.deck {
+    grid-area: deck;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+.instructions { grid-area: instructions; }
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------------------------------------components-------------------------------------*/
+
+body {
+    font-family: Chalkboard;
+}
+
+div {
+    /*border: dashed 2px orange;*/
+}
+
+h1 {
+    text-align: center;
+    font-size: xxx-large;
+    margin: 0px 0px 0px 0px;
+}
+
+h2 { text-align: center; }
+
+h3 { text-align: center; }
+
+h4 { text-align: center; }
+
+form { text-align: center; }
+
+fieldset { text-align: left; }
+
+legend {}
+
+label {}
+
+input {}
+
+#name {
+    margin-left: 0px;
+}
+
+#DOB {
+    margin-left: 0px;
+}
+
+#submit {
+    font-size: medium;
+    margin-left: 100px;
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: blue;
+    border: white solid 1px;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    color: blue;
+    background-color: white;
+    border: blue solid 1px;
+}
+
+#submit:active {
+    color: white;
+    background-color: black;
+    border: white solid 1px;
+}
+
+button {
+    width: 250px;
+    height: 100px;
+    font-size: xxx-large;
+    font-variant: small-caps;
+    border: solid white 2px;
+    border-radius: 20px;
+    /*margin: 0 auto;*/
+}
+
+#start {
+    color: white;
+    background-color: green;
+}
+
+#start:hover {
+    color: green;
+    background-color: white;
+    border: green solid 2px;
+}
+
+#start:active {
+    color: white;
+    background-color: black;
+    border: white solid 2px;
+}
+
+#reset {
+    color: white;
+    background-color: red;
+}
+
+#reset:hover {
+    color: red;
+    background-color: white;
+    border: red solid 2px;
+}
+
+#reset:active {
+    color: white;
+    background-color: black;
+    border: white solid 2px;
+}
+
+#cs {
+    font-size: x-large;
+    text-align: center;
+}
+
+#currentScoreBox {
+    max-height: 100px;
+    width: 300px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#currentScore {
+    font-size: xxx-large;
+    margin: 30px;
+    padding: 0px;
+}
+
+
+#All\ Time\ Leaders {
+    display: block;
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+}
+
+#leadersLine {
+    width: 50px;
+}
+
+A#ATLnamesDiv {
+    display: block;
+}
+
+.scoreP {
+    display: inline;
+    color: green;
+}
+
+.scoreS {
+    display: inline;
+}
+
+.nameP {
+    display: inline;
+    color: green;
+}
+
+.nameS {
+    display: inline;
+}
+
+.dateP {
+    display: inline;
+    color: green;
+}
+
+.dateS {
+    display: inline;
+}
+
+#Your\ Deck {
+    display: block;
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+}
+
+#yourdeckLine {
+    width: 50px;
+}
+
+#yourdeckImgDiv {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#deckPic {
+    max-width: 200px;
+    /*display: block;*/
+}
+
+.cardBack {
+    background-image: url("png/Card Back copy.png");
+    background-size: 140px 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    /*box-shadow: 5px 5px 50px 1px black;*/
+    border: none;
+    margin: 2px 2px 2px 2px;
+    cursor: pointer;
+    width: 110px;
+    height: 160px;
+}
+
+.cardBack:hover {
+    background-image: url("png/Card Back Hover copy.png");
+}
+
+.cardBack:active {
+    background-image: url("png/Card Back Active copy.png");
+}
