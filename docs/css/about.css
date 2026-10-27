@@ -64,7 +64,8 @@ nav ul {
 nav li {
     display: inline-block;
     border-right: solid grey 1px;
-
+    width: 120px;
+    text-align: center;
 }
 
 nav a {
