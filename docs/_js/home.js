@@ -6,9 +6,11 @@ setTimeout(() => {
     video.play();
 }, 5000);
 
-// When video starts playing, fade active text to white
+// When video starts playing, fade active text to white after short delay
 video.addEventListener('play', () => {
-    activeLink.classList.add('video-playing');
+    setTimeout(() => {
+        activeLink.classList.add('video-playing');
+    }, 1000);
 });
 
 // Fade text back to royalblue 2 seconds before video ends
