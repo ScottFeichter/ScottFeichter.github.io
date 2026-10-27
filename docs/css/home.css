@@ -15,11 +15,6 @@ body {
     border: 4px solid lime;
 }
 
-/*---------------------------------------------Container--------------------------------------------------------*/
-.container {
-    border: 4px solid red;
-}
-
 /*---------------------------------------------Header--------------------------------------------------------*/
 .Header {
     border: 4px solid orange;
@@ -39,7 +34,7 @@ nav ul {
 nav li {
     display: inline-block;
     border-right: solid grey 1px;
-    width: 140px;
+    width: 8.75rem;
     text-align: center;
 }
 
@@ -77,59 +72,87 @@ nav a:hover {
     border: 4px solid white;
     display: flex;
     flex-direction: row;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/*---------------------------------------------LeftSpacerContainer--------------------------------------------------------*/
+.LeftSpacerContainer {
+    border: 4px solid pink;
+    width: 11.25rem;
+}
+
+/*---------------------------------------------CenterSpacerContainer--------------------------------------------------------*/
+.CenterSpacerContainer {
+    border: 4px solid pink;
+    width: 7.5rem;
+}
+
+/*---------------------------------------------RightSpacerContainer--------------------------------------------------------*/
+.RightSpacerContainer {
+    border: 4px solid pink;
+    width: 15rem;
 }
 
 /*---------------------------------------------WelcomeContainer--------------------------------------------------------*/
 .WelcomeContainer {
     border: 4px solid green;
-    text-align: center;
+    text-align: left;
     flex: 1;
+    padding-bottom: 4rem;
 }
 
-#splash_line {}
+h1 {
+    margin-top: 6rem;
+}
+
 
 #audio {
     color: royalblue;
-    width: 450px;
-    height: 40px;
+    width: 28.125rem;
+    height: 2.5rem;
     border-radius: 50px;
-    margin-top: 16px;
+    margin-top: 1rem;
 }
 
 /*---------------------------------------------PhotoContainer--------------------------------------------------------*/
 .PhotoContainer {
     border: 4px solid cyan;
-    flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    width: fit-content;
+    padding-bottom: 4rem;
 }
 
 #headshot {
-    width: 25%;
+    width: 12rem;
+    margin-top: 1rem;
 }
 
-/*---------------------------------------------Brevity--------------------------------------------------------*/
-.Brevity {
+/*---------------------------------------------BrevityContainer--------------------------------------------------------*/
+.BrevityContainer {
     border: 4px solid blue;
     text-align: center;
+    margin-bottom: 8rem;
 }
 
 #brevity {
     font-style: italic;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .button {
     background-color: royalblue;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
-    padding: 12px 28px;
-    border-radius: 12px;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.75rem;
     border: 1px solid royalblue;
-    width: 160px;
+    width: 10rem;
     justify-content: center;
     transition: 0.4s;
 }
@@ -145,12 +168,12 @@ nav a:hover {
     transition: 0.1ms;
 }
 
-/*---------------------------------------------Footer--------------------------------------------------------*/
-.Footer {
+/*---------------------------------------------FooterContainer--------------------------------------------------------*/
+.FooterContainer {
     border: 4px solid magenta;
     text-align: center;
 }
 
 #copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
