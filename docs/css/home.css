@@ -12,16 +12,17 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     z-index: -100;
-    border: 4px solid lime;
+    /* border: 4px solid lime; */
 }
 
 /*---------------------------------------------Header--------------------------------------------------------*/
 .Header {
-    border: 4px solid orange;
+    /* border: 4px solid orange; */
 }
 
 nav {
-    border: 4px solid yellow;
+    /* border: 4px solid yellow; */
+    margin-top: 1.5rem;
 }
 
 nav ul {
@@ -33,20 +34,23 @@ nav ul {
 
 nav li {
     display: inline-block;
-    border-right: solid grey 1px;
     width: 8.75rem;
     text-align: center;
+    margin-right: 0.25rem;
 }
 
 nav a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+    font-family: Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    font-variant: small-caps;
+    line-height: 1;
     background-color: royalblue;
     color: white;
-    padding: 0.5rem 0;
+    height: 2.5rem;
 }
 
 nav a:focus {
@@ -62,14 +66,16 @@ nav a:hover {
 .active {
     background-color: transparent;
     color: royalblue;
-    border-right: solid black 1px;
-    border-left: solid black 1px;
-    border-top: solid black 1px;
+    transition: color 1.5s ease;
+}
+
+.active.video-playing {
+    color: white;
 }
 
 /*---------------------------------------------ContentSection--------------------------------------------------------*/
 .ContentSection {
-    border: 4px solid white;
+    /* border: 4px solid white; */
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
@@ -79,25 +85,25 @@ nav a:hover {
 
 /*---------------------------------------------LeftSpacerContainer--------------------------------------------------------*/
 .LeftSpacerContainer {
-    border: 4px solid pink;
-    width: 11.25rem;
+    /* border: 4px solid pink; */
+    width: 13.5rem;
 }
 
 /*---------------------------------------------CenterSpacerContainer--------------------------------------------------------*/
 .CenterSpacerContainer {
-    border: 4px solid pink;
-    width: 7.5rem;
+    /* border: 4px solid pink; */
+    width: 9.9rem;
 }
 
 /*---------------------------------------------RightSpacerContainer--------------------------------------------------------*/
 .RightSpacerContainer {
-    border: 4px solid pink;
-    width: 15rem;
+    /* border: 4px solid pink; */
+    width: 12rem;
 }
 
 /*---------------------------------------------WelcomeContainer--------------------------------------------------------*/
 .WelcomeContainer {
-    border: 4px solid green;
+    /* border: 4px solid green; */
     text-align: left;
     flex: 1;
     padding-bottom: 4rem;
@@ -118,7 +124,7 @@ h1 {
 
 /*---------------------------------------------PhotoContainer--------------------------------------------------------*/
 .PhotoContainer {
-    border: 4px solid cyan;
+    /* border: 4px solid cyan; */
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -133,7 +139,7 @@ h1 {
 
 /*---------------------------------------------BrevityContainer--------------------------------------------------------*/
 .BrevityContainer {
-    border: 4px solid blue;
+    /* border: 4px solid blue; */
     text-align: center;
     margin-bottom: 8rem;
 }
@@ -146,6 +152,7 @@ h1 {
 
 .button {
     background-color: royalblue;
+    font-family: Arial, sans-serif;
     font-size: 1rem;
     font-weight: bold;
     color: white;
@@ -170,7 +177,7 @@ h1 {
 
 /*---------------------------------------------FooterContainer--------------------------------------------------------*/
 .FooterContainer {
-    border: 4px solid magenta;
+    /* border: 4px solid magenta; */
     text-align: center;
 }
 
