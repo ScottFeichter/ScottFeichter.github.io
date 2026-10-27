@@ -65,7 +65,8 @@ nav ul {
 nav li {
     display: inline-block;
     border-right: solid grey 1px;
-
+    width: 120px;
+    text-align: center;
 }
 
 nav a {
@@ -133,6 +134,10 @@ nav a:hover {
 .Form h2 {
     font-variant: small-caps;
     text-align: center;
+}
+
+input, select, textarea, ::placeholder {
+    font-family: Georgia, Verdana, sans-serif;
 }
 
 /* Style inputs with type="text", select elements and textareas */
