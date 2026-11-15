@@ -1,10 +1,10 @@
 const video = document.getElementById('videoBackground');
 const activeLink = document.querySelector('nav a.active');
 
-// Initial 5 second delay before first play
+// Initial delay before first play - waits for page fade in plus 2 second gap
 setTimeout(() => {
     video.play();
-}, 5000);
+}, 3500);
 
 // When video starts playing, fade active text to white after short delay
 video.addEventListener('play', () => {
