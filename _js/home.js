@@ -71,6 +71,7 @@ ytScript.src = 'https://www.youtube.com/iframe_api';
 document.head.appendChild(ytScript);
 
 document.getElementById('button_splash_agree').addEventListener('click', () => {
+    if (!audioPlayer.paused) audioPlayer.pause();
     modalTrue.classList.add('visible');
     brevityIframe.src = brevityIframe.dataset.src;
 });
