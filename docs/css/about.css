@@ -1,53 +1,20 @@
 body {
-    font-family: Georgia, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f2f5;
+    animation: fadeIn 2s ease;
 }
 
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -100;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
-/*---------------------------------------------.container--------------------------------------------------------*/
-
-.container {  display: grid;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 200px 100px 100px 100px 10px 100px 100px;
-    grid-template-rows:
-            100px
-            50px
-            50px
-            50px
-            160px
-            50px
-            35px
-            35.3px
-            164.7px
-            70px
-            0px
-            10px;
-    grid-template-areas:
-    "Header Header Header Header Header Header Header Header Header Header Header . . "
-    ". Mission Mission Mission Mission Mission Mission . . . . . ."
-    ". Mission Mission Mission Mission Mission Mission Logo Logo Logo . . ."
-    ". Mission Mission Mission Mission Mission Mission Logo Logo Logo . . ."
-    ". Mission Mission Mission Mission Mission Mission Logo Logo Logo . . ."
-    ". Resume Resume Resume Resume Resume Resume Resume Resume . . . ."
-    ". Resume Resume Resume Resume Resume Resume Resume Resume . . . ."
-    ". Resume Resume Resume Resume Resume Resume Resume Resume . . . ."
-    ". Resume Resume Resume Resume Resume Resume Resume Resume . . . ."
-    ". . . . . . . . . . . . ."
-    "Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer . . . ";
-}
-
-/*.container > div {border: darkred dotted 4px}*/
 
 /*---------------------------------------------Header--------------------------------------------------------*/
-.Header { grid-area: Header; }
+.Header {
+    background-color: #f0f2f5;
+}
 
 nav {
     margin-top: 1.5rem;
@@ -66,7 +33,7 @@ nav li {
     display: inline-block;
     width: 8.75rem;
     text-align: center;
-    margin-right: 0.25rem;
+    margin-right: 0.1rem;
 }
 
 nav a {
@@ -99,41 +66,52 @@ nav a:hover {
     color: royalblue;
 }
 
+/*---------------------------------------------Main--------------------------------------------------------*/
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    max-width: 700px;
+}
 
-/*---------------------------------------------Mission--------------------------------------------------------*/
-.Mission { grid-area: Mission;}
+/*---------------------------------------------Card--------------------------------------------------------*/
+.Card {
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-#mission {
-    font-size: 24px;
-    text-align: left;
-    margin-left: 30px;
+.Card h1 {
+    margin-top: 0.5rem;
 }
 
 
-
-/*---------------------------------------------Photo--------------------------------------------------------*/
-.Logo { grid-area: Logo; }
-
-#logo {
-    max-width: 100%;
-    max-height: 100%;
+    font-size: 1rem;
+    color: royalblue;
+    text-decoration: none;
 }
 
-
-/*---------------------------------------------Resume--------------------------------------------------------*/
-.Resume { grid-area: Resume;}
-
-#doc-list a {
-    font-size: 24px;
+#doc-list a:hover {
+    text-decoration: underline;
+    color: black;
 }
 
+#doc-list li {
+    margin-bottom: 0.5rem;
+}
 
 /*---------------------------------------------Footer--------------------------------------------------------*/
 .Footer {
-    grid-area: Footer;
     text-align: center;
+    padding: 1rem;
 }
 
 #copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
 }

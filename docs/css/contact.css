@@ -1,54 +1,21 @@
 body {
-    font-family: Georgia, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f2f5;
+    animation: fadeIn 2s ease;
 }
 
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -100;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
-/*---------------------------------------------.container--------------------------------------------------------*/
-
-.container {  display: grid;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 200px 100px 100px 100px 10px 100px 100px;
-    grid-template-rows:
-            100px
-            50px
-            50px
-            50px
-            160px
-            50px
-            35px
-            35.3px
-            164.7px
-            70px
-            0px
-            10px;
-    grid-template-areas:
-    "Header Header Header Header Header Header Header Header Header Header Header . . "
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". Contact Contact Contact Contact Contact Form Form Form Form . . ."
-    ". . . . . . . . . . . . ."
-    "Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer . . . ";
-}
-
-/*.container > div {border: darkred dotted 4px}*/
 
 /*---------------------------------------------Header--------------------------------------------------------*/
-.Header { grid-area: Header; }
+.Header {
+    background-color: #f0f2f5;
+    /* border: 2px dotted red; */
+}
 
 nav {
     margin-top: 1.5rem;
@@ -67,7 +34,7 @@ nav li {
     display: inline-block;
     width: 8.75rem;
     text-align: center;
-    margin-right: 0.25rem;
+    margin-right: 0.1rem;
 }
 
 nav a {
@@ -100,83 +67,105 @@ nav a:hover {
     color: royalblue;
 }
 
+/*---------------------------------------------Main--------------------------------------------------------*/
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.25rem 3rem;
+    max-width: 600px;
+    /* border: 2px dotted blue; */
+}
 
 /*---------------------------------------------Contact--------------------------------------------------------*/
 .Contact {
-    grid-area: Contact;
-    /*border: red dotted 2px;*/
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    /* border: 2px dotted green; */
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+.Contact h1 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
 
-
-/*---------------------------------------------Form--------------------------------------------------------*/
+.Contact hr {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
 .Form {
-    grid-area: Form;
-    margin: 30px 20px 0px 80px;
-    /*border: green dotted 2px;*/
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    /* border: 2px dotted orange; */
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .Form h2 {
-    font-variant: small-caps;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    margin-top: 0;
 }
 
 input, select, textarea, ::placeholder {
-    font-family: Georgia, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
-input[type=tel], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+input[type=tel] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
 }
 
-/* Style the submit button with a specific background color etc */
 input[type=submit] {
     background-color: royalblue;
+    font-family: Arial, sans-serif;
     color: white;
     padding: 12px 20px;
-    margin-left: 150px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
     background-color: black;
-    color: white;
-
 }
-
-/*-----------------------------------------------------------------------------------------------------*/
-
-
 
 /*---------------------------------------------Footer--------------------------------------------------------*/
 .Footer {
-    grid-area: Footer;
     text-align: center;
-    /*border: orange dotted 2px;*/
+    /* border: 2px dotted magenta; */
+    padding: 1rem;
 }
 
 #copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
