@@ -35,24 +35,46 @@ video.addEventListener('ended', () => {
 
 const modalTrue  = document.getElementById('modal-true');
 
-document.getElementById('button_splash_agree').addEventListener('click', () => {
-    modalTrue.classList.add('visible');
-    // Fade text out first
-    setTimeout(() => {
-        modalTrue.querySelector('p').style.transition = 'opacity 2s ease';
-        modalTrue.querySelector('p').style.opacity = '0';
-    }, 5000);
-    // Then fade window — overlaps with end of text fade
-    setTimeout(() => {
-        modalTrue.style.transition = 'opacity 2s ease, visibility 2s ease';
+let trueModalTimers = [];
+
+function clearTrueModalTimers() {
+    trueModalTimers.forEach(t => clearTimeout(t));
+    trueModalTimers = [];
+}
+
+function fadeOutTrueModal() {
+    clearTrueModalTimers();
+    modalTrue.querySelector('p').style.transition = 'opacity 0.8s ease';
+    modalTrue.querySelector('p').style.opacity = '0';
+    trueModalTimers.push(setTimeout(() => {
+        modalTrue.style.transition = 'opacity 1s ease, visibility 1s ease';
         modalTrue.classList.remove('visible');
-    }, 6000);
-    setTimeout(() => {
+    }, 800));
+    trueModalTimers.push(setTimeout(() => {
         modalTrue.style.transition = '';
         modalTrue.querySelector('p').style.transition = '';
         modalTrue.querySelector('p').style.opacity = '';
-    }, 8000);
+    }, 1800));
+}
+
+document.getElementById('button_splash_agree').addEventListener('click', () => {
+    modalTrue.classList.add('visible');
+    trueModalTimers.push(setTimeout(() => {
+        modalTrue.querySelector('p').style.transition = 'opacity 2s ease';
+        modalTrue.querySelector('p').style.opacity = '0';
+    }, 5000));
+    trueModalTimers.push(setTimeout(() => {
+        modalTrue.style.transition = 'opacity 2s ease, visibility 2s ease';
+        modalTrue.classList.remove('visible');
+    }, 6000));
+    trueModalTimers.push(setTimeout(() => {
+        modalTrue.style.transition = '';
+        modalTrue.querySelector('p').style.transition = '';
+        modalTrue.querySelector('p').style.opacity = '';
+    }, 8000));
 });
+
+modalTrue.addEventListener('click', fadeOutTrueModal);
 
 const warPeaceCard = document.getElementById('war-peace-card');
 
