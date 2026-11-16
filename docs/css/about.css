@@ -6,17 +6,10 @@ body {
 }
 
 #site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background-color: #f0f2f5;
 }
 
 #page-content {
     animation: fadeIn 2s ease;
-    padding-top: 5rem;
 }
 
 @keyframes fadeIn {
@@ -92,7 +85,7 @@ nav a:active {
     flex-direction: column;
     align-items: flex-start;
     padding: 1.5rem 2rem;
-    max-width: 700px;
+    max-width: 900px;
 }
 
 /*---------------------------------------------Card--------------------------------------------------------*/
@@ -111,19 +104,38 @@ nav a:active {
     margin-top: 0.5rem;
 }
 
-
-    font-size: 1rem;
-    color: royalblue;
-    text-decoration: none;
-}
-
-#doc-list a:hover {
-    text-decoration: underline;
-    color: black;
-}
-
-#doc-list li {
+.Card h2 {
+    margin-top: 0;
     margin-bottom: 0.5rem;
+}
+
+.VideoWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 1.25rem;
+}
+
+.VideoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+}
+
+.PdfWrapper {
+    width: 100%;
+    height: 80vh;
+}
+
+.PdfWrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.25rem;
 }
 
 /*---------------------------------------------Footer--------------------------------------------------------*/

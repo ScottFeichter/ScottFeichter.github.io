@@ -6,17 +6,10 @@ body {
 }
 
 #site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background-color: #f0f2f5;
 }
 
 #page-content {
     animation: fadeIn 2s ease;
-    padding-top: 3.5rem;
 }
 
 @keyframes fadeIn {
@@ -91,7 +84,7 @@ nav a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem 1rem 4rem;
+    padding: 1.25rem 1rem 4rem;
     gap: 2.5rem;
 }
 
