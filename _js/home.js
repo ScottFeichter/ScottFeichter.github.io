@@ -86,10 +86,10 @@ document.getElementById('brevity-video-next').addEventListener('click', () => cl
 }));
 
 const warPeaceCard = document.getElementById('war-peace-card');
-const falseAudio = new Audio('/mp3/greeting3.mp3');
+const audioPlayer = document.getElementById('audio');
 
 document.getElementById('button_splash_disagree').addEventListener('click', () => {
     warPeaceCard.classList.toggle('open');
-    falseAudio.currentTime = 0;
-    falseAudio.play();
+    audioPlayer.currentTime = 0;
+    audioPlayer.play();
 });
