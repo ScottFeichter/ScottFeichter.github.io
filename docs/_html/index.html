@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website to promote the skills of Scott Feichter">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Programming, CPU, Website, Developer, Java, C++, Guitar, Gypsy Jazz, Beatles, Flamenco, San Francisco">
+    <meta name="author" content="Scott Feichter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Feichter</title>
+    <link rel="icon" type="image/svg+xml" href="/_favicon/favicon.svg">
+    <link rel="stylesheet" href="/_css/home.css">
+</head>
+
+<!---------------------------------------------------BODY----------------------------------------------------->
+<body>
+
+<video id="videoBackground" autoplay muted>
+    <source src="/mp4/bocaFlare2.1.mp4" type="video/mp4">
+</video>
+
+<!---------------------------------------------------Header----------------------------------------------------->
+<header class="Header">
+    <nav id="site-nav">
+        <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="page-content">
+
+<!---------------------------------------------------Content Section----------------------------------------------------->
+    <section class="ContentSection">
+
+        <div class="LeftSpacerContainer"></div>
+
+        <div class="PhotoContainer">
+            <img id="headshot" src="/jpg/head%20shot%20scott_f002.jpg" alt="image">
+        </div>
+
+        <div class="CenterSpacerContainer"></div>
+
+        <div class="WelcomeContainer">
+            <h1>Scott Feichter</h1>
+            <hr id="splash_line">
+            <h2>Full Stack Software Engineer</h2>
+            <audio id="audio" controls>
+                <source src="/m4a/Home Greeting 11.16.26.m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="RightSpacerContainer"></div>
+
+        <div id="modal-true" class="BrevityModal">
+            <p>Polonius — Lord Chamberlain of Denmark, chief counselor to the king, and a man who valued brevity in theory, if not always in&nbsp;practice.</p>
+        </div>
+
+    </section>
+
+<!---------------------------------------------------Brevity Container----------------------------------------------------->
+    <section class="BrevityContainer">
+        <p id="brevity">"Brevity is the soul of wit"</p>
+        <button id="button_splash_agree" class="button">True</button>
+        <button id="button_splash_disagree" class="button">False</button>
+    </section>
+
+<!---------------------------------------------------War and Peace Card----------------------------------------------------->
+    <section id="war-peace-card">
+        <div class="Card WarPeaceCard">
+            <h2>Here is the unabridged version:</h2>
+            <hr>
+            <div class="PdfWrapper">
+                <iframe src="/pdf/war-peace.pdf#toolbar=0&zoom=100" title="War and Peace"></iframe>
+            </div>
+        </div>
+    </section>
+
+<!---------------------------------------------------Footer Container----------------------------------------------------->
+    <footer class="FooterContainer">
+        <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
+    </footer>
+    <script src="/_js/home.js"></script>
+    <script src="/_js/nav.js"></script>
+</div>
+</body>
+</html>

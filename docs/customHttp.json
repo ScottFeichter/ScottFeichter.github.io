@@ -1,0 +1,6 @@
+[
+  { "source": "/", "target": "/_html/index.html", "status": "200" },
+  { "source": "/about", "target": "/_html/about.html", "status": "200" },
+  { "source": "/portfolio", "target": "/_html/portfolio.html", "status": "200" },
+  { "source": "/contact", "target": "/_html/contact.html", "status": "200" }
+]
