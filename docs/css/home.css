@@ -2,7 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+#site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#page-content {
     animation: fadeIn 1.5s ease;
+    padding-top: 3.5rem;
 }
 
 @keyframes fadeIn {
@@ -74,11 +86,12 @@ nav a:hover {
 .active {
     background-color: transparent;
     color: royalblue;
-    transition: color 1.5s ease;
+    transition: background-color 2s ease, color 2s ease;
 }
 
 .active.video-playing {
     color: white;
+    transition: background-color 1.5s ease, color 1.5s ease;
 }
 
 /*---------------------------------------------ContentSection--------------------------------------------------------*/
@@ -94,7 +107,7 @@ nav a:hover {
 /*---------------------------------------------LeftSpacerContainer--------------------------------------------------------*/
 .LeftSpacerContainer {
     /* border: 4px solid pink; */
-    width: 13.5rem;
+    width: 9rem;
 }
 
 /*---------------------------------------------CenterSpacerContainer--------------------------------------------------------*/
