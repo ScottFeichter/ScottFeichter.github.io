@@ -8,290 +8,298 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scott Feichter — Portfolio</title>
     <link rel="stylesheet" href="css/portfolio.css">
-    <script src="_js/nav.js"></script>
 </head>
+<!---------------------------------------------------BODY------------------------------------------------------------->
 <body>
 
-<header class="Header">
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<!---------------------------------------------------Nav------------------------------------------------------------->
+<nav id="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-<main class="Main">
+<!---------------------------------------------------Page Content------------------------------------------------------------->
+<div id="page-content">
 
-    <!-- ===================== PLETHER ===================== -->
-    <article class="Card CardPlether">
-        <h2 class="CardTitle">Plether</h2>
-        <p class="CardTagline">Stablecoin Platform : pixel-perfect Tether.to clone</p>
+<!---------------------------------------------------Main------------------------------------------------------------->
+    <main class="Main">
 
-        <div class="VideoWrap">
-            <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/2-6f3EUVxcU?modestbranding=1&rel=0" title="Plether walkthrough" allowfullscreen></iframe></div>
-        </div>
+        <!-- ===================== PLETHER ===================== -->
+        <article class="Card CardPlether">
+            <h2 class="CardTitle">Plether</h2>
+            <p class="CardTagline">Stablecoin Platform : pixel-perfect Tether.to clone</p>
 
-        <div class="Links">
-            <h3>Links</h3>
-            <div class="LinksGrid LinksGrid2col">
-                <a class="button" href="https://plether.co.uk" target="_blank">Frontend (Production)</a>
-                <a class="button" href="https://staging-frontend.plether.co.uk" target="_blank">Frontend (Staging)</a>
-                <a class="button" href="https://internal.plether.co.uk" target="_blank">Internal Dashboard (Production)</a>
-                <a class="button" href="https://staging-internal.plether.co.uk" target="_blank">Internal Dashboard (Staging)</a>
-                <a class="button" href="https://api.plether.co.uk/health" target="_blank">API Health (Production)</a>
-                <a class="button" href="https://staging-api.plether.co.uk/health" target="_blank">API Health (Staging)</a>
+            <div class="VideoWrap">
+                <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/2-6f3EUVxcU?modestbranding=1&rel=0" title="Plether walkthrough" allowfullscreen></iframe></div>
             </div>
-        </div>
 
-        <section class="Demonstrates">
-            <h3>What this demonstrates</h3>
-            <ul>
-                <li>Hand-rolled Rust authentication
-                    <ul>
-                        <li>Argon2 password hashing</li>
-                        <li>JWT access and refresh tokens</li>
-                        <li>CSRF protection</li>
-                        <li>Google Authenticator TOTP 2FA</li>
-                    </ul>
-                </li>
-                <li>Pixel-perfect CSS clone of Tether.to</li>
-                <li>Multi-repo architecture
-                    <ul>
-                        <li>Separate backend, public frontend, internal dashboard, news scraper</li>
-                    </ul>
-                </li>
-                <li>Full staging and production CI/CD pipelines
-                    <ul>
-                        <li>Docker, ECR, ECS Fargate rolling deployments</li>
-                        <li>Discord pipeline notifications</li>
-                    </ul>
-                </li>
-                <li>AWS infrastructure
-                    <ul>
-                        <li>ECS Fargate, RDS PostgreSQL, CloudFront, SES, Route 53, ACM</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <div class="Tech">
-            <h3>Technologies</h3>
-            <div class="TechGrid">
-                <span class="Pill">Rust</span>
-                <span class="Pill">Axum</span>
-                <span class="Pill">PostgreSQL</span>
-                <span class="Pill">Diesel ORM</span>
-                <span class="Pill">React 19</span>
-                <span class="Pill">TypeScript</span>
-                <span class="Pill">Redux Toolkit</span>
-                <span class="Pill">Vite</span>
-                <span class="Pill">Docker</span>
-                <span class="Pill">ECS Fargate</span>
-                <span class="Pill">RDS</span>
-                <span class="Pill">CloudFront</span>
-                <span class="Pill">SES</span>
-                <span class="Pill">GitHub Actions</span>
-                <span class="Pill">CSS Modules</span>
-                <span class="Pill">OIDC</span>
+            <div class="Links">
+                <h3>Links</h3>
+                <div class="LinksGrid LinksGrid2col">
+                    <a class="button" href="https://plether.co.uk" target="_blank">Frontend (Production)</a>
+                    <a class="button" href="https://staging-frontend.plether.co.uk" target="_blank">Frontend (Staging)</a>
+                    <a class="button" href="https://internal.plether.co.uk" target="_blank">Internal Dashboard (Production)</a>
+                    <a class="button" href="https://staging-internal.plether.co.uk" target="_blank">Internal Dashboard (Staging)</a>
+                    <a class="button" href="https://api.plether.co.uk/health" target="_blank">API Health (Production)</a>
+                    <a class="button" href="https://staging-api.plether.co.uk/health" target="_blank">API Health (Staging)</a>
+                </div>
             </div>
-        </div>
 
-        <div class="Repos">
-            <h3>Repositories</h3>
-            <table class="RepoTable">
-                <tr><td class="RepoLabel">Backend:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/backend-plether-06-14-2025-2" target="_blank">backend-plether-06-14-2025-2</a></td></tr>
-                <tr><td class="RepoLabel">Frontend:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/frontend-plether-06-14-2025-2" target="_blank">frontend-plether-06-14-2025-2</a></td></tr>
-                <tr><td class="RepoLabel">Internal:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/internal-plether-06-14-2025-2" target="_blank">internal-plether-06-14-2025-2</a></td></tr>
-                <tr><td class="RepoLabel">Admin:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/admiend-plether-06-14-2025-2" target="_blank">admiend-plether-06-14-2025-2</a></td></tr>
-                <tr><td class="RepoLabel">Scraper:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/scraper-news-plether-06-14-2025-2" target="_blank">scraper-news-plether-06-14-2025-2</a></td></tr>
-            </table>
-        </div>
-    </article>
+            <section class="Demonstrates">
+                <h3>What this demonstrates</h3>
+                <ul>
+                    <li>Hand-rolled Rust authentication
+                        <ul>
+                            <li>Argon2 password hashing</li>
+                            <li>JWT access and refresh tokens</li>
+                            <li>CSRF protection</li>
+                            <li>Google Authenticator TOTP 2FA</li>
+                        </ul>
+                    </li>
+                    <li>Pixel-perfect CSS clone of Tether.to</li>
+                    <li>Multi-repo architecture
+                        <ul>
+                            <li>Separate backend, public frontend, internal dashboard, news scraper</li>
+                        </ul>
+                    </li>
+                    <li>Full staging and production CI/CD pipelines
+                        <ul>
+                            <li>Docker, ECR, ECS Fargate rolling deployments</li>
+                            <li>Discord pipeline notifications</li>
+                        </ul>
+                    </li>
+                    <li>AWS infrastructure
+                        <ul>
+                            <li>ECS Fargate, RDS PostgreSQL, CloudFront, SES, Route 53, ACM</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
 
-    <!-- ===================== CURASSIST ===================== -->
-    <article class="Card">
-        <h2 class="CardTitle">CurAssist</h2>
-        <p class="CardTagline">Workflow Management and Curation : live production tool for ShelterTech nonprofit volunteers</p>
-
-        <div class="VideoWrap VideoWrapDouble">
-            <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/e1_lMNt9wUk?modestbranding=1&rel=0" title="CurAssist UI walkthrough" allowfullscreen></iframe></div>
-            <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/uyHNVtIzfAA?modestbranding=1&rel=0" title="CurAssist code walkthrough" allowfullscreen></iframe></div>
-        </div>
-
-        <div class="Links">
-            <h3>Links</h3>
-            <div class="LinksGrid">
-                <a class="button" href="https://sfsgcurassist.com" target="_blank">Live App</a>
-                <a class="button" href="https://sfsgcurassist.com/test" target="_blank">Backend Test Page</a>
+            <div class="Tech">
+                <h3>Technologies</h3>
+                <div class="TechGrid">
+                    <span class="Pill">Rust</span>
+                    <span class="Pill">Axum</span>
+                    <span class="Pill">PostgreSQL</span>
+                    <span class="Pill">Diesel ORM</span>
+                    <span class="Pill">React 19</span>
+                    <span class="Pill">TypeScript</span>
+                    <span class="Pill">Redux Toolkit</span>
+                    <span class="Pill">Vite</span>
+                    <span class="Pill">Docker</span>
+                    <span class="Pill">ECS Fargate</span>
+                    <span class="Pill">RDS</span>
+                    <span class="Pill">CloudFront</span>
+                    <span class="Pill">SES</span>
+                    <span class="Pill">GitHub Actions</span>
+                    <span class="Pill">CSS Modules</span>
+                    <span class="Pill">OIDC</span>
+                </div>
             </div>
-        </div>
 
-        <section class="Demonstrates">
-            <h3>What this demonstrates</h3>
-            <ul>
-                <li>Real production app solving a real-world problem
-                    <ul>
-                        <li>Used by ShelterTech volunteers to curate nonprofit records for the SF Service Guide</li>
-                    </ul>
-                </li>
-                <li>End-to-end data ingestion and curation workflow
-                    <ul>
-                        <li>Spreadsheet intake, MongoDB storage, form hydration, SFSG API submission</li>
-                    </ul>
-                </li>
-                <li>Live AWS EC2 deployment
-                    <ul>
-                        <li>Nginx reverse proxy, Let's Encrypt SSL, PM2 process management</li>
-                    </ul>
-                </li>
-                <li>Full CI/CD via GitHub Actions
-                    <ul>
-                        <li>Push to production branch auto-deploys to EC2</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <div class="Tech">
-            <h3>Technologies</h3>
-            <div class="TechGrid">
-                <span class="Pill">Node.js</span>
-                <span class="Pill">TypeScript</span>
-                <span class="Pill">Express</span>
-                <span class="Pill">MongoDB Atlas</span>
-                <span class="Pill">Mongoose</span>
-                <span class="Pill">Jest</span>
-                <span class="Pill">AWS EC2</span>
-                <span class="Pill">Nginx</span>
-                <span class="Pill">PM2</span>
-                <span class="Pill">GitHub Actions</span>
-                <span class="Pill">Winston</span>
-                <span class="Pill">Supertest</span>
+            <div class="Repos">
+                <h3>Repositories</h3>
+                <table class="RepoTable">
+                    <tr><td class="RepoLabel">Backend:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/backend-plether-06-14-2025-2" target="_blank">backend-plether-06-14-2025-2</a></td></tr>
+                    <tr><td class="RepoLabel">Frontend:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/frontend-plether-06-14-2025-2" target="_blank">frontend-plether-06-14-2025-2</a></td></tr>
+                    <tr><td class="RepoLabel">Internal:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/internal-plether-06-14-2025-2" target="_blank">internal-plether-06-14-2025-2</a></td></tr>
+                    <tr><td class="RepoLabel">Admin:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/admiend-plether-06-14-2025-2" target="_blank">admiend-plether-06-14-2025-2</a></td></tr>
+                    <tr><td class="RepoLabel">Scraper:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/scraper-news-plether-06-14-2025-2" target="_blank">scraper-news-plether-06-14-2025-2</a></td></tr>
+                </table>
             </div>
-        </div>
+        </article>
 
-        <div class="Repos">
-            <h3>Repositories</h3>
-            <table class="RepoTable">
-                <tr><td class="RepoLabel">Full Stack App:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/CurAssist" target="_blank">CurAssist</a></td></tr>
-            </table>
-        </div>
-    </article>
+        <!-- ===================== CURASSIST ===================== -->
+        <article class="Card">
+            <h2 class="CardTitle">CurAssist</h2>
+            <p class="CardTagline">Workflow Management and Curation : live production tool for ShelterTech nonprofit volunteers</p>
 
-    <!-- ===================== TLA-PROG ===================== -->
-    <article class="Card">
-        <h2 class="CardTitle">TLA-PROG</h2>
-        <p class="CardTagline">Education Platform : CS and Programming</p>
-
-        <div class="VideoWrap">
-            <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/TSODLdgbLgg?modestbranding=1&rel=0" title="TLA-PROG walkthrough" allowfullscreen></iframe></div>
-        </div>
-
-        <div class="Links">
-            <h3>Links</h3>
-            <div class="LinksGrid">
-                <a class="button" href="https://tlaprog.com" target="_blank">Visit TLA-PROG</a>
+            <div class="VideoWrap VideoWrapDouble">
+                <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/e1_lMNt9wUk?modestbranding=1&rel=0" title="CurAssist UI walkthrough" allowfullscreen></iframe></div>
+                <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/uyHNVtIzfAA?modestbranding=1&rel=0" title="CurAssist code walkthrough" allowfullscreen></iframe></div>
             </div>
-        </div>
 
-        <section class="Demonstrates">
-            <h3>What this demonstrates</h3>
-            <ul>
-                <li>Structured, high-quality educational content at scale
-                    <ul>
-                        <li>Full subject/course/topic/unit hierarchy</li>
-                    </ul>
-                </li>
-                <li>Deep Node.js and content architecture knowledge
-                    <ul>
-                        <li>Build-time config generation, symlink-based content registry, auto-generated navigation</li>
-                    </ul>
-                </li>
-                <li>AWS Amplify deployment with automatic builds on push to main</li>
-            </ul>
-        </section>
-
-        <div class="Tech">
-            <h3>Technologies</h3>
-            <div class="TechGrid">
-                <span class="Pill">React 19</span>
-                <span class="Pill">React Router 7</span>
-                <span class="Pill">Vite</span>
-                <span class="Pill">Node.js</span>
-                <span class="Pill">AWS Amplify</span>
-                <span class="Pill">Route 53</span>
-                <span class="Pill">JavaScript</span>
-                <span class="Pill">CSS</span>
+            <div class="Links">
+                <h3>Links</h3>
+                <div class="LinksGrid">
+                    <a class="button" href="https://sfsgcurassist.com" target="_blank">Live App</a>
+                    <a class="button" href="https://sfsgcurassist.com/test" target="_blank">Backend Test Page</a>
+                </div>
             </div>
-        </div>
 
-        <div class="Repos">
-            <h3>Repositories</h3>
-            <table class="RepoTable">
-                <tr><td class="RepoLabel">React SPA:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/TLA-PROG" target="_blank">TLA-PROG</a></td></tr>
-            </table>
-        </div>
-    </article>
+            <section class="Demonstrates">
+                <h3>What this demonstrates</h3>
+                <ul>
+                    <li>Real production app solving a real-world problem
+                        <ul>
+                            <li>Used by ShelterTech volunteers to curate nonprofit records for the SF Service Guide</li>
+                        </ul>
+                    </li>
+                    <li>End-to-end data ingestion and curation workflow
+                        <ul>
+                            <li>Spreadsheet intake, MongoDB storage, form hydration, SFSG API submission</li>
+                        </ul>
+                    </li>
+                    <li>Live AWS EC2 deployment
+                        <ul>
+                            <li>Nginx reverse proxy, Let's Encrypt SSL, PM2 process management</li>
+                        </ul>
+                    </li>
+                    <li>Full CI/CD via GitHub Actions
+                        <ul>
+                            <li>Push to production branch auto-deploys to EC2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
 
-    <!-- ===================== TLA-MATH ===================== -->
-    <article class="Card">
-        <h2 class="CardTitle">TLA-MATH</h2>
-        <p class="CardTagline">Education Platform : mathematics : arithmetic through advanced pure math</p>
-
-        <div class="VideoWrap">
-            <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/TeiLf6OUalw?modestbranding=1&rel=0" title="TLA-MATH walkthrough" allowfullscreen></iframe></div>
-        </div>
-
-        <div class="Links">
-            <h3>Links</h3>
-            <div class="LinksGrid">
-                <a class="button" href="https://tlamath.com" target="_blank">Visit TLA-MATH</a>
+            <div class="Tech">
+                <h3>Technologies</h3>
+                <div class="TechGrid">
+                    <span class="Pill">Node.js</span>
+                    <span class="Pill">TypeScript</span>
+                    <span class="Pill">Express</span>
+                    <span class="Pill">MongoDB Atlas</span>
+                    <span class="Pill">Mongoose</span>
+                    <span class="Pill">Jest</span>
+                    <span class="Pill">AWS EC2</span>
+                    <span class="Pill">Nginx</span>
+                    <span class="Pill">PM2</span>
+                    <span class="Pill">GitHub Actions</span>
+                    <span class="Pill">Winston</span>
+                    <span class="Pill">Supertest</span>
+                </div>
             </div>
-        </div>
 
-        <section class="Demonstrates">
-            <h3>What this demonstrates</h3>
-            <ul>
-                <li>Deep mathematical knowledge
-                    <ul>
-                        <li>Content spans arithmetic, logic, discrete math, analysis, applied math, and advanced pure math</li>
-                    </ul>
-                </li>
-                <li>Rigorous educational content with KaTeX math rendering and Desmos interactive graphs</li>
-                <li>Same React/Vite/Amplify architecture as TLA-PROG applied to a more technically demanding domain</li>
-            </ul>
-        </section>
-
-        <div class="Tech">
-            <h3>Technologies</h3>
-            <div class="TechGrid">
-                <span class="Pill">React 19</span>
-                <span class="Pill">React Router 7</span>
-                <span class="Pill">Vite</span>
-                <span class="Pill">KaTeX</span>
-                <span class="Pill">Desmos</span>
-                <span class="Pill">AWS Amplify</span>
-                <span class="Pill">Route 53</span>
-                <span class="Pill">react-markdown</span>
+            <div class="Repos">
+                <h3>Repositories</h3>
+                <table class="RepoTable">
+                    <tr><td class="RepoLabel">Full Stack App:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/CurAssist" target="_blank">CurAssist</a></td></tr>
+                </table>
             </div>
-        </div>
+        </article>
 
-        <div class="Repos">
-            <h3>Repositories</h3>
-            <table class="RepoTable">
-                <tr><td class="RepoLabel">React SPA:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/TLA-MATH" target="_blank">TLA-MATH</a></td></tr>
-            </table>
-        </div>
-    </article>
+        <!-- ===================== TLA-PROG ===================== -->
+        <article class="Card">
+            <h2 class="CardTitle">TLA-PROG</h2>
+            <p class="CardTagline">Education Platform : CS and Programming</p>
 
-</main>
+            <div class="VideoWrap">
+                <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/TSODLdgbLgg?modestbranding=1&rel=0" title="TLA-PROG walkthrough" allowfullscreen></iframe></div>
+            </div>
 
-<footer class="FooterContainer">
-    <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
-</footer>
+            <div class="Links">
+                <h3>Links</h3>
+                <div class="LinksGrid">
+                    <a class="button" href="https://tlaprog.com" target="_blank">Visit TLA-PROG</a>
+                </div>
+            </div>
 
+            <section class="Demonstrates">
+                <h3>What this demonstrates</h3>
+                <ul>
+                    <li>Structured, high-quality educational content at scale
+                        <ul>
+                            <li>Full subject/course/topic/unit hierarchy</li>
+                        </ul>
+                    </li>
+                    <li>Deep Node.js and content architecture knowledge
+                        <ul>
+                            <li>Build-time config generation, symlink-based content registry, auto-generated navigation</li>
+                        </ul>
+                    </li>
+                    <li>AWS Amplify deployment with automatic builds on push to main</li>
+                </ul>
+            </section>
+
+            <div class="Tech">
+                <h3>Technologies</h3>
+                <div class="TechGrid">
+                    <span class="Pill">React 19</span>
+                    <span class="Pill">React Router 7</span>
+                    <span class="Pill">Vite</span>
+                    <span class="Pill">Node.js</span>
+                    <span class="Pill">AWS Amplify</span>
+                    <span class="Pill">Route 53</span>
+                    <span class="Pill">JavaScript</span>
+                    <span class="Pill">CSS</span>
+                </div>
+            </div>
+
+            <div class="Repos">
+                <h3>Repositories</h3>
+                <table class="RepoTable">
+                    <tr><td class="RepoLabel">React SPA:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/TLA-PROG" target="_blank">TLA-PROG</a></td></tr>
+                </table>
+            </div>
+        </article>
+
+        <!-- ===================== TLA-MATH ===================== -->
+        <article class="Card">
+            <h2 class="CardTitle">TLA-MATH</h2>
+            <p class="CardTagline">Education Platform : mathematics : arithmetic through advanced pure math</p>
+
+            <div class="VideoWrap">
+                <div class="VideoFrame"><iframe src="https://www.youtube.com/embed/TeiLf6OUalw?modestbranding=1&rel=0" title="TLA-MATH walkthrough" allowfullscreen></iframe></div>
+            </div>
+
+            <div class="Links">
+                <h3>Links</h3>
+                <div class="LinksGrid">
+                    <a class="button" href="https://tlamath.com" target="_blank">Visit TLA-MATH</a>
+                </div>
+            </div>
+
+            <section class="Demonstrates">
+                <h3>What this demonstrates</h3>
+                <ul>
+                    <li>Deep mathematical knowledge
+                        <ul>
+                            <li>Content spans arithmetic, logic, discrete math, analysis, applied math, and advanced pure math</li>
+                        </ul>
+                    </li>
+                    <li>Rigorous educational content with KaTeX math rendering and Desmos interactive graphs</li>
+                    <li>Same React/Vite/Amplify architecture as TLA-PROG applied to a more technically demanding domain</li>
+                </ul>
+            </section>
+
+            <div class="Tech">
+                <h3>Technologies</h3>
+                <div class="TechGrid">
+                    <span class="Pill">React 19</span>
+                    <span class="Pill">React Router 7</span>
+                    <span class="Pill">Vite</span>
+                    <span class="Pill">KaTeX</span>
+                    <span class="Pill">Desmos</span>
+                    <span class="Pill">AWS Amplify</span>
+                    <span class="Pill">Route 53</span>
+                    <span class="Pill">react-markdown</span>
+                </div>
+            </div>
+
+            <div class="Repos">
+                <h3>Repositories</h3>
+                <table class="RepoTable">
+                    <tr><td class="RepoLabel">React SPA:</td><td><a class="RepoLink" href="https://github.com/ScottFeichter/TLA-MATH" target="_blank">TLA-MATH</a></td></tr>
+                </table>
+            </div>
+        </article>
+
+    </main>
+
+<!---------------------------------------------------Footer------------------------------------------------------------->
+    <footer class="FooterContainer">
+        <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
+    </footer>
+
+<!---------------------------------------------------Page Content End------------------------------------------------------------->
+</div>
+
+<script src="_js/nav.js"></script>
 </body>
 </html>

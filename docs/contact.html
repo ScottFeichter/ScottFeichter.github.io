@@ -9,60 +9,68 @@
     <title>Scott Feichter</title>
     <link rel="stylesheet" href="css/contact.css">
     <script src="js/contact.js"></script>
-    <script src="_js/nav.js"></script>
 </head>
+<!---------------------------------------------------BODY------------------------------------------------------------->
 <body>
 
-<header class="Header">
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<!---------------------------------------------------Nav------------------------------------------------------------->
+<nav id="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+</nav>
 
-<main class="Main">
+<!---------------------------------------------------Page Content------------------------------------------------------------->
+<div id="page-content">
 
-    <div class="Contact">
-        <h1>Contact Me</h1>
-        <hr>
-        <h3><a href="tel:4157028512">415-702-8512</a></h3>
-        <h3><a href="mailto:scottfeichter@gmail.com">scottfeichter@gmail.com</a></h3>
-    </div>
+<!---------------------------------------------------Main------------------------------------------------------------->
+    <main class="Main">
 
-    <div class="Form">
-        <h2>Send a Message</h2>
-        <form>
-            <label for="fname">Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <div class="Contact">
+            <h1>Contact Me</h1>
+            <hr>
+            <h3><a href="tel:4157028512">415-702-8512</a></h3>
+            <h3><a href="mailto:scottfeichter@gmail.com">scottfeichter@gmail.com</a></h3>
+        </div>
 
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="555-555-5555..">
+        <div class="Form">
+            <h2>Send a Message</h2>
+            <form>
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-            <label for="reason">Subject</label>
-            <select id="reason" name="reason">
-                <option value="">Select a reason...</option>
-                <option value="job">Job Opportunity</option>
-                <option value="freelance">Freelance Project</option>
-                <option value="collaboration">Collaboration</option>
-                <option value="other">Other</option>
-            </select>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="555-555-5555..">
 
-            <label for="subject">Message</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <label for="reason">Subject</label>
+                <select id="reason" name="reason">
+                    <option value="">Select a reason...</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="freelance">Freelance Project</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="other">Other</option>
+                </select>
 
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+                <label for="subject">Message</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-</main>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 
-<footer class="Footer">
-    <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
-</footer>
+    </main>
 
+<!---------------------------------------------------Footer------------------------------------------------------------->
+    <footer class="Footer">
+        <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
+    </footer>
+
+<!---------------------------------------------------Page Content End------------------------------------------------------------->
+</div>
+
+<script src="_js/nav.js"></script>
 </body>
 </html>

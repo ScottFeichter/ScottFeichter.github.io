@@ -3,7 +3,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
+}
+
+#site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #f0f2f5;
+}
+
+#page-content {
     animation: fadeIn 2s ease;
+    padding-top: 5rem;
 }
 
 @keyframes fadeIn {
@@ -64,6 +77,7 @@ nav a:hover {
 .active {
     background-color: transparent;
     color: royalblue;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*---------------------------------------------Main--------------------------------------------------------*/
