@@ -6,67 +6,41 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Programming, CPU, Website, Developer, Java, C++, Guitar, Gypsy Jazz, Beatles, Flamenco, San Francisco">
     <meta name="author" content="Scott Feichter">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Scott Feichter</title>
-    <!--  <base href="https://www.scottfeichter.com" target="_blank">-->
-
     <link rel="stylesheet" href="css/about.css">
     <script src="js/about.js"></script>
+    <script src="_js/nav.js"></script>
 </head>
-
-<!---------------------------------------------------BODY------------------------------------------------------------->
 <body>
 
-<!--<video id="flare" autoplay muted>-->
-<!--    <source src="/mp4/bocaFlare2.1.mp4" type="video/mp4">-->
-<!--</video>-->
+<header class="Header">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<!---------------------------------------------------Container Begin------------------------------------------------------------->
-<div class="container">
+<main class="Main">
 
-    <!---------------------------------------------------Header------------------------------------------------------------->
-    <div class="Header">
-
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html" class="active">about</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-    </div>
-
-
-    <!---------------------------------------------------Mission------------------------------------------------------------->
-
-    <div class="Mission">
+    <div class="Card">
         <h1>Mission Statement</h1>
         <hr>
-        <p id="mission">
+        <p>
             This is a placeholder for further information.
             As I build out my site I will have more content and portfolio to share.
-            I enjoy the learning process very much. <br>
-            <br>My interest in computers is focused on digital forms, networks, and 
-            automation. I would love the chance for us to know each other more. 
-            Thank you for visiting!<br>
-            <br>
-            <br>
-
+            I enjoy the learning process very much.
+            <br><br>
+            My interest in computers is focused on digital forms, networks, and
+            automation. I would love the chance for us to know each other more.
+            Thank you for visiting!
         </p>
-
-
     </div>
 
-    <!---------------------------------------------------Logo------------------------------------------------------------->
-
-    <div class="Logo">
-        <img id="logo" src="png/Logo%201%2010.22.22.png">
-    </div>
-
-    <!---------------------------------------------------Resume------------------------------------------------------------->
-
-    <div class="Resume">
+    <div class="Card">
         <h2>Resume Materials</h2>
         <ul id="doc-list">
             <li><a href="pdf/Resume/Scott%20Feichter%20-%20Resume%2010.23.22%20Some%20Indent.pdf">Short Resume</a></li>
@@ -78,14 +52,11 @@
         </ul>
     </div>
 
+</main>
 
-    <!---------------------------------------------------Footer------------------------------------------------------------->
-    <div class="Footer">
-        <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
-    </div>
-
-    <!---------------------------------------------------Container End------------------------------------------------------------->
-</div>
+<footer class="Footer">
+    <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
+</footer>
 
 </body>
 </html>
