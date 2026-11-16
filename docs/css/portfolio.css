@@ -19,7 +19,7 @@ body {
 nav {
     margin-top: 1.5rem;
     padding-bottom: 1rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
 
 nav ul {
@@ -48,6 +48,7 @@ nav a {
     background-color: royalblue;
     color: white;
     height: 2.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:focus {
