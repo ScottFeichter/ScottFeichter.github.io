@@ -34,23 +34,28 @@ video.addEventListener('ended', () => {
 // ============================================================
 
 const modalTrue  = document.getElementById('modal-true');
-const modalFalse = document.getElementById('modal-false');
 
 document.getElementById('button_splash_agree').addEventListener('click', () => {
     modalTrue.classList.add('visible');
+    // Fade text out first
     setTimeout(() => {
-        modalTrue.style.transition = 'opacity 1.5s ease, visibility 1.5s ease';
+        modalTrue.querySelector('p').style.transition = 'opacity 2s ease';
+        modalTrue.querySelector('p').style.opacity = '0';
+    }, 5000);
+    // Then fade window — overlaps with end of text fade
+    setTimeout(() => {
+        modalTrue.style.transition = 'opacity 2s ease, visibility 2s ease';
         modalTrue.classList.remove('visible');
-    }, 1000);
+    }, 6000);
     setTimeout(() => {
         modalTrue.style.transition = '';
-    }, 2500);
+        modalTrue.querySelector('p').style.transition = '';
+        modalTrue.querySelector('p').style.opacity = '';
+    }, 8000);
 });
+
+const warPeaceCard = document.getElementById('war-peace-card');
 
 document.getElementById('button_splash_disagree').addEventListener('click', () => {
-    modalFalse.classList.add('visible');
-});
-
-document.getElementById('modal-false-close').addEventListener('click', () => {
-    modalFalse.classList.remove('visible');
+    warPeaceCard.classList.toggle('open');
 });

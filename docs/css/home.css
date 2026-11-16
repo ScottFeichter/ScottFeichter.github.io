@@ -102,6 +102,7 @@ nav a:active {
 /*---------------------------------------------ContentSection--------------------------------------------------------*/
 .ContentSection {
     /* border: 4px solid white; */
+    position: relative;
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
@@ -215,25 +216,74 @@ h1 {
 
 /*---------------------------------------------Modals--------------------------------------------------------*/
 .BrevityModal {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.82);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: black;
     font-family: Arial, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-style: italic;
     text-align: center;
     padding: 2rem 2.5rem;
+    border: 1px solid rgba(180, 180, 180, 0.5);
     border-radius: 0.5rem;
-    max-width: 480px;
+    overflow: hidden;
+    max-width: 680px;
     width: 90%;
     z-index: 99999;
     pointer-events: auto;
     opacity: 0;
     visibility: hidden;
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.8), 0 20px 40px rgba(0, 0, 0, 0.5);
     transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.BrevityModalFalse {
+    position: fixed;
+}
+
+/*---------------------------------------------War and Peace Card--------------------------------------------------------*/
+#war-peace-card {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+#war-peace-card.open {
+    max-height: 120vh;
+}
+
+.WarPeaceCard {
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    margin: 0 2rem 2rem;
+    box-sizing: border-box;
+}
+
+.WarPeaceCard h2 {
+    margin-top: 0;
+    font-style: italic;
+    color: royalblue;
+    text-align: center;
+}
+
+.WarPeaceCard .PdfWrapper {
+    width: 100%;
+    height: 80vh;
+}
+
+.WarPeaceCard .PdfWrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.25rem;
 }
 
 .BrevityModal.visible {
