@@ -55,8 +55,27 @@
 
         <div class="RightSpacerContainer"></div>
 
-        <div id="modal-true" class="BrevityModal">
-            <p>Polonius — Lord Chamberlain of Denmark, chief counselor to the king, and a man who valued brevity in theory, if not always in&nbsp;practice.</p>
+        <!---------------------------------------------------Brevity Modal Container----------------------------------------------------->
+        <div id="brevity-modal-container">
+
+            <div id="modal-true" class="BrevityModal">
+                <p>Polonius — Lord Chamberlain of Denmark, chief counselor to the king, and a man who valued brevity in theory, if not always in&nbsp;practice.</p>
+                <div class="VideoWrapper">
+                    <iframe id="brevity-video-iframe"
+                        src=""
+                        data-src="https://www.youtube.com/embed/bSQfUqEKJ4M?enablejsapi=1&autoplay=1&rel=0"
+                        title="Brevity is the soul of wit"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="BrevityModalButtons">
+                    <button class="BrevityModalClose" id="brevity-video-close">close</button>
+                    <button class="BrevityModalClose" id="brevity-video-next">next</button>
+                </div>
+            </div>
+
         </div>
 
     </section>

@@ -34,6 +34,7 @@ video.addEventListener('ended', () => {
 // ============================================================
 
 const modalTrue  = document.getElementById('modal-true');
+const brevityIframe = document.getElementById('brevity-video-iframe');
 
 let trueModalTimers = [];
 
@@ -44,40 +45,51 @@ function clearTrueModalTimers() {
 
 function fadeOutTrueModal() {
     clearTrueModalTimers();
-    modalTrue.querySelector('p').style.transition = 'opacity 0.8s ease';
-    modalTrue.querySelector('p').style.opacity = '0';
-    trueModalTimers.push(setTimeout(() => {
-        modalTrue.style.transition = 'opacity 1s ease, visibility 1s ease';
-        modalTrue.classList.remove('visible');
-    }, 800));
-    trueModalTimers.push(setTimeout(() => {
-        modalTrue.style.transition = '';
-        modalTrue.querySelector('p').style.transition = '';
-        modalTrue.querySelector('p').style.opacity = '';
-    }, 1800));
+    modalTrue.style.transition = 'opacity 1s ease, visibility 1s ease';
+    modalTrue.classList.remove('visible');
+    brevityIframe.src = '';
+    setTimeout(() => { modalTrue.style.transition = ''; }, 1000);
 }
+
+function closeVideoModal(callback) {
+    fadeOutTrueModal();
+    setTimeout(() => { if (callback) callback(); }, 1000);
+}
+
+window.onYouTubeIframeAPIReady = function() {
+    new YT.Player('brevity-video-iframe', {
+        events: {
+            onStateChange: (e) => {
+                if (e.data === 0) fadeOutTrueModal();
+            }
+        }
+    });
+};
+
+const ytScript = document.createElement('script');
+ytScript.src = 'https://www.youtube.com/iframe_api';
+document.head.appendChild(ytScript);
 
 document.getElementById('button_splash_agree').addEventListener('click', () => {
     modalTrue.classList.add('visible');
-    trueModalTimers.push(setTimeout(() => {
-        modalTrue.querySelector('p').style.transition = 'opacity 2s ease';
-        modalTrue.querySelector('p').style.opacity = '0';
-    }, 5000));
-    trueModalTimers.push(setTimeout(() => {
-        modalTrue.style.transition = 'opacity 2s ease, visibility 2s ease';
-        modalTrue.classList.remove('visible');
-    }, 6000));
-    trueModalTimers.push(setTimeout(() => {
-        modalTrue.style.transition = '';
-        modalTrue.querySelector('p').style.transition = '';
-        modalTrue.querySelector('p').style.opacity = '';
-    }, 8000));
+    brevityIframe.src = brevityIframe.dataset.src;
 });
 
-modalTrue.addEventListener('click', fadeOutTrueModal);
+modalTrue.addEventListener('click', (e) => {
+    if (e.target === modalTrue) fadeOutTrueModal();
+});
+
+document.getElementById('brevity-video-close').addEventListener('click', () => closeVideoModal());
+document.getElementById('brevity-video-next').addEventListener('click', () => closeVideoModal(() => {
+    const aboutLink = document.querySelector('#site-nav a[href="/about"]');
+    if (aboutLink) aboutLink.click();
+}));
 
 const warPeaceCard = document.getElementById('war-peace-card');
+const falseAudio = new Audio('/mp3/greeting3.mp3');
 
 document.getElementById('button_splash_disagree').addEventListener('click', () => {
     warPeaceCard.classList.toggle('open');
+    falseAudio.currentTime = 0;
+    falseAudio.play();
 });
