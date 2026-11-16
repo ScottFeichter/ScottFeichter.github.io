@@ -6,66 +6,180 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Programming, CPU, Website, Developer, Java, C++, Guitar, Gypsy Jazz, Beatles, Flamenco, San Francisco">
     <meta name="author" content="Scott Feichter">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <meta http-equiv="refresh" content="30">-->
-
-    <title>Scott Feichter</title>
-    <!--  <base href="https://www.scottfeichter.com" target="_blank">-->
-
+    <title>Scott Feichter — Portfolio</title>
     <link rel="stylesheet" href="css/portfolio.css">
-    <script src="js/portfolio.js"></script>
 </head>
-
-<!---------------------------------------------------BODY------------------------------------------------------------->
 <body>
 
-<!--<video id="flare" autoplay muted>-->
-<!--    <source src="/mp4/bocaFlare2.1.mp4" type="video/mp4">-->
-<!--</video>-->
+<header class="Header">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<!---------------------------------------------------Container Begin------------------------------------------------------------->
-<div class="container">
+<main class="Main">
 
-    <!---------------------------------------------------Header------------------------------------------------------------->
-    <div class="Header">
+    <!-- ===================== PLETHER ===================== -->
+    <article class="Card CardPlether">
+        <h2 class="CardTitle">Plether</h2>
+        <p class="CardTagline">Stablecoin platform — pixel-perfect Tether.to clone</p>
 
-        <nav>
+        <section class="Demonstrates">
+            <h3>What this demonstrates</h3>
             <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="portfolio.html" class="active">portfolio</a></li>
-                <li><a href="contact.html">contact</a></li>
+                <li>Hand-rolled Rust authentication — Argon2 password hashing, JWT access/refresh tokens, CSRF protection, Google Authenticator TOTP 2FA</li>
+                <li>Pixel-perfect CSS clone of Tether.to — full marketing site reproduced from scratch</li>
+                <li>Multi-repo architecture: separate backend, public frontend, internal dashboard, news scraper</li>
+                <li>Full staging and production CI/CD pipelines with Docker, ECR, ECS Fargate rolling deployments, and Discord pipeline notifications</li>
+                <li>AWS mastery: ECS Fargate, RDS PostgreSQL, CloudFront, SES transactional email, Route 53, ACM</li>
             </ul>
-        </nav>
-    </div>
+        </section>
 
+        <div class="VideoWrap">
+            <iframe src="https://www.youtube.com/embed/2-6f3EUVxcU" title="Plether walkthrough" allowfullscreen></iframe>
+        </div>
 
-    <!---------------------------------------------------Rye------------------------------------------------------------->
+        <div class="Pills">
+            <span class="Pill">Rust</span>
+            <span class="Pill">Axum</span>
+            <span class="Pill">PostgreSQL</span>
+            <span class="Pill">Diesel ORM</span>
+            <span class="Pill">React 19</span>
+            <span class="Pill">TypeScript</span>
+            <span class="Pill">Redux Toolkit</span>
+            <span class="Pill">Vite</span>
+            <span class="Pill">Docker</span>
+            <span class="Pill">ECS Fargate</span>
+            <span class="Pill">RDS</span>
+            <span class="Pill">CloudFront</span>
+            <span class="Pill">SES</span>
+            <span class="Pill">GitHub Actions</span>
+        </div>
 
-    <div class="Rye">
-      <a href="MemeGenerator\index.html">Meme Generator</a>
-      <a href="MemoryGame\index.html">MemoryGame</a>
-    </div>
+        <div class="Links">
+            <a class="button" href="https://plether.co.uk" target="_blank">Frontend (Production)</a>
+            <a class="button" href="https://staging-frontend.plether.co.uk" target="_blank">Frontend (Staging)</a>
+            <a class="button" href="https://internal.plether.co.uk" target="_blank">Internal Dashboard (Production)</a>
+            <a class="button" href="https://staging-internal.plether.co.uk" target="_blank">Internal Dashboard (Staging)</a>
+            <a class="button" href="https://api.plether.co.uk/health" target="_blank">API Health (Production)</a>
+            <a class="button" href="https://staging-api.plether.co.uk/health" target="_blank">API Health (Staging)</a>
+        </div>
+    </article>
 
-    <!---------------------------------------------------------------------------------------------------------------->
+    <!-- ===================== CURASSIST ===================== -->
+    <article class="Card">
+        <h2 class="CardTitle">CurAssist</h2>
+        <p class="CardTagline">Live production curation tool for ShelterTech nonprofit volunteers</p>
 
-    <div class="">
+        <section class="Demonstrates">
+            <h3>What this demonstrates</h3>
+            <ul>
+                <li>Real production app solving a real-world problem — used by ShelterTech volunteers to curate nonprofit records for the SF Service Guide</li>
+                <li>End-to-end data ingestion and curation workflow design: spreadsheet intake → MongoDB → form hydration → SFSG API submission</li>
+                <li>Live AWS EC2 deployment with Nginx reverse proxy, Let's Encrypt SSL, and PM2 process management</li>
+                <li>Full CI/CD via GitHub Actions — push to production branch auto-deploys to EC2</li>
+            </ul>
+        </section>
 
-    </div>
+        <div class="VideoWrap VideoWrapDouble">
+            <iframe src="https://www.youtube.com/embed/e1_lMNt9wUk" title="CurAssist UI walkthrough" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/uyHNVtIzfAA" title="CurAssist code walkthrough" allowfullscreen></iframe>
+        </div>
 
-    <!---------------------------------------------------------------------------------------------------------------->
+        <div class="Pills">
+            <span class="Pill">Node.js</span>
+            <span class="Pill">TypeScript</span>
+            <span class="Pill">Express</span>
+            <span class="Pill">MongoDB Atlas</span>
+            <span class="Pill">Mongoose</span>
+            <span class="Pill">Jest</span>
+            <span class="Pill">AWS EC2</span>
+            <span class="Pill">Nginx</span>
+            <span class="Pill">PM2</span>
+            <span class="Pill">GitHub Actions</span>
+        </div>
 
-    <div class="">
+        <div class="Links">
+            <a class="button" href="https://sfsgcurassist.com" target="_blank">Live App</a>
+            <a class="button" href="https://sfsgcurassist.com/test" target="_blank">Backend Test Page</a>
+        </div>
+    </article>
 
-    </div>
+    <!-- ===================== TLA-PROG ===================== -->
+    <article class="Card">
+        <h2 class="CardTitle">TLA-PROG</h2>
+        <p class="CardTagline">Structured programming education platform</p>
 
+        <section class="Demonstrates">
+            <h3>What this demonstrates</h3>
+            <ul>
+                <li>Ability to write structured, high-quality educational content at scale — full subject/course/topic/unit hierarchy</li>
+                <li>Deep knowledge of Node.js and content architecture — build-time config generation, symlink-based content registry, auto-generated navigation</li>
+                <li>Clean AWS Amplify deployment with automatic builds on push to main</li>
+            </ul>
+        </section>
 
-    <!---------------------------------------------------Footer------------------------------------------------------------->
-    <div class="Footer">
-        <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
-    </div>
+        <div class="VideoWrap">
+            <iframe src="https://www.youtube.com/embed/TSODLdgbLgg" title="TLA-PROG walkthrough" allowfullscreen></iframe>
+        </div>
 
-    <!---------------------------------------------------Container End------------------------------------------------------------->
-</div>
+        <div class="Pills">
+            <span class="Pill">React 19</span>
+            <span class="Pill">React Router 7</span>
+            <span class="Pill">Vite</span>
+            <span class="Pill">Node.js</span>
+            <span class="Pill">AWS Amplify</span>
+            <span class="Pill">Route 53</span>
+        </div>
+
+        <div class="Links">
+            <a class="button" href="https://tlaprog.com" target="_blank">Visit TLA-PROG</a>
+        </div>
+    </article>
+
+    <!-- ===================== TLA-MATH ===================== -->
+    <article class="Card">
+        <h2 class="CardTitle">TLA-MATH</h2>
+        <p class="CardTagline">Mathematics learning platform — arithmetic through advanced pure math</p>
+
+        <section class="Demonstrates">
+            <h3>What this demonstrates</h3>
+            <ul>
+                <li>Deep mathematical knowledge — content spans arithmetic, logic, discrete math, analysis, applied math, and advanced pure math</li>
+                <li>Ability to write rigorous, structured educational content with KaTeX math rendering and Desmos interactive graphs</li>
+                <li>Same solid React/Vite/Amplify architecture as TLA-PROG, applied to a more technically demanding content domain</li>
+            </ul>
+        </section>
+
+        <div class="VideoWrap">
+            <iframe src="https://www.youtube.com/embed/TeiLf6OUalw" title="TLA-MATH walkthrough" allowfullscreen></iframe>
+        </div>
+
+        <div class="Pills">
+            <span class="Pill">React 19</span>
+            <span class="Pill">React Router 7</span>
+            <span class="Pill">Vite</span>
+            <span class="Pill">KaTeX</span>
+            <span class="Pill">Desmos</span>
+            <span class="Pill">AWS Amplify</span>
+            <span class="Pill">Route 53</span>
+        </div>
+
+        <div class="Links">
+            <a class="button" href="https://tlamath.com" target="_blank">Visit TLA-MATH</a>
+        </div>
+    </article>
+
+</main>
+
+<footer class="FooterContainer">
+    <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
+</footer>
 
 </body>
 </html>

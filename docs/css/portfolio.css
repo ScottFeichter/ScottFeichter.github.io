@@ -2,57 +2,24 @@ body {
     font-family: Georgia, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f2f5;
+    animation: fadeIn 1.5s ease;
 }
 
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -100;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
-/*---------------------------------------------.container--------------------------------------------------------*/
-
-.container {  display: grid;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 200px 100px 100px 100px 10px 100px 100px;
-    grid-template-rows:
-            100px
-            50px
-            50px
-            50px
-            160px
-            50px
-            35px
-            35.3px
-            164.7px
-            70px
-            0px
-            10px;
-    grid-template-areas:
-    "Header Header Header Header Header Header Header Header Header Header Header . . "
-    ". Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye ."
-    ". Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye ."
-    ". Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye ."
-    ". Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye ."
-    ". Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye ."
-    ". Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye ."
-    ". Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye Rye ."
-    ". . . . . . . . . . . . ."
-    ". . . . . . . . . . . . ."
-    "Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer . . . ";
-}
-
-/*.container > div {border: darkred dotted 4px}*/
 
 /*---------------------------------------------Header--------------------------------------------------------*/
-.Header { grid-area: Header; }
+.Header {
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
 
 nav {
-    /*border-top: solid black 1px;*/
-    /*border-bottom: solid black 1px;*/
-    margin: 1rem auto;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 nav ul {
@@ -64,27 +31,24 @@ nav ul {
 
 nav li {
     display: inline-block;
-    border-right: solid grey 1px;
-    width: 120px;
+    width: 8.75rem;
     text-align: center;
+    margin-right: 0.25rem;
 }
 
 nav a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+    font-family: Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    font-variant: small-caps;
+    line-height: 1;
     background-color: royalblue;
     color: white;
-    padding: 0.5rem 0;
+    height: 2.5rem;
 }
-
-/*nav a:link {*/
-/*    background-color: royalblue;*/
-/*    color: white;*/
-
-/*}*/
 
 nav a:focus {
     background-color: white;
@@ -99,48 +63,159 @@ nav a:hover {
 .active {
     background-color: transparent;
     color: royalblue;
-    border-right: solid black 1px;
-    border-left: solid black 1px;
-    border-top: solid black 1px;
 }
 
-/*
-5 Link States (must be in this order)
-
-:link = before visited
-:visited = after visited
-:focus = when selected
-:hover = on mouse hover
-:active = after clicked before loaded
-
- */
-
-
-/*---------------------------------------------Rye--------------------------------------------------------*/
-.Rye { grid-area: Rye; text-align: center;}
-
-iframe {
-    margin-top: 100px;
-    margin-right: 160px;
+/*---------------------------------------------Main--------------------------------------------------------*/
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem 4rem;
+    gap: 2.5rem;
 }
 
+/*---------------------------------------------Card--------------------------------------------------------*/
+.Card {
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    padding: 2rem 2.5rem;
+    width: 100%;
+    max-width: 860px;
+    box-sizing: border-box;
+}
 
+.CardPlether {
+    max-width: 960px;
+}
 
+.CardTitle {
+    font-family: Arial, sans-serif;
+    font-size: 1.75rem;
+    color: royalblue;
+    margin: 0 0 0.25rem;
+}
 
-/*-----------------------------------------------------------------------------------------------------*/
+.CardTagline {
+    font-style: italic;
+    color: #555;
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+}
 
+/*---------------------------------------------Demonstrates--------------------------------------------------------*/
+.Demonstrates {
+    background-color: #f7f9fc;
+    border-left: 4px solid royalblue;
+    border-radius: 0 0.375rem 0.375rem 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.75rem;
+}
 
+.Demonstrates h3 {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: royalblue;
+    margin: 0 0 0.75rem;
+}
 
-/*-----------------------------------------------------------------------------------------------------*/
+.Demonstrates ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
 
+.Demonstrates li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+}
 
+.Demonstrates li:last-child {
+    margin-bottom: 0;
+}
+
+/*---------------------------------------------Video--------------------------------------------------------*/
+.VideoWrap {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.VideoWrap iframe {
+    flex: 1;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    border-radius: 0.375rem;
+}
+
+/*---------------------------------------------Pills--------------------------------------------------------*/
+.Pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.Pill {
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    color: royalblue;
+    border: 1.5px solid royalblue;
+    border-radius: 999px;
+    padding: 0.2rem 0.75rem;
+    white-space: nowrap;
+}
+
+/*---------------------------------------------Links--------------------------------------------------------*/
+.Links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: royalblue;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid royalblue;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+.button:active {
+    background-color: white;
+    color: royalblue;
+    transition: 0.1ms;
+}
 
 /*---------------------------------------------Footer--------------------------------------------------------*/
-.Footer {
-    grid-area: Footer;
+.FooterContainer {
     text-align: center;
+    padding-bottom: 1.5rem;
 }
 
 #copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
