@@ -1,9 +1,9 @@
 body {
-    font-family: Georgia, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
-    animation: fadeIn 1.5s ease;
+    animation: fadeIn 2s ease;
 }
 
 @keyframes fadeIn {
@@ -13,13 +13,13 @@ body {
 
 /*---------------------------------------------Header--------------------------------------------------------*/
 .Header {
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background-color: #f0f2f5;
 }
 
 nav {
     margin-top: 1.5rem;
     padding-bottom: 1rem;
+    padding-left: 1.5rem;
 }
 
 nav ul {
@@ -82,7 +82,7 @@ nav a:hover {
     border-radius: 0.5rem;
     padding: 2rem 2.5rem;
     width: 100%;
-    max-width: 860px;
+    max-width: 960px;
     box-sizing: border-box;
 }
 
@@ -98,7 +98,6 @@ nav a:hover {
 }
 
 .CardTagline {
-    font-style: italic;
     color: #555;
     margin: 0 0 1.5rem;
     font-size: 1rem;
@@ -107,10 +106,9 @@ nav a:hover {
 /*---------------------------------------------Demonstrates--------------------------------------------------------*/
 .Demonstrates {
     background-color: #f7f9fc;
-    border-left: 4px solid royalblue;
-    border-radius: 0 0.375rem 0.375rem 0;
+    border-radius: 0.375rem;
     padding: 1rem 1.25rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2.25rem;
 }
 
 .Demonstrates h3 {
@@ -154,7 +152,7 @@ nav a:hover {
 .VideoWrap {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .VideoFrame {
@@ -163,6 +161,7 @@ nav a:hover {
     aspect-ratio: 16 / 9;
     border-radius: 0.375rem;
     overflow: hidden;
+    border: 1.5px solid #dde1e7;
 }
 
 .VideoFrame iframe {
@@ -175,12 +174,17 @@ nav a:hover {
     border: none;
 }
 
-/*---------------------------------------------Links--------------------------------------------------------*/
+.CardDivider {
+    border: none;
+    border-top: 1px solid #b0b8c4;
+    margin: 1.25rem -1rem 1.75rem;
+}
+
+
 .Links {
-    border: 1.5px solid #dde1e7;
     border-radius: 0.5rem;
     padding: 1rem 1.25rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .Links h3 {
@@ -253,7 +257,6 @@ nav a:hover {
 
 /*---------------------------------------------Repos--------------------------------------------------------*/
 .Repos {
-    border: 1.5px solid #dde1e7;
     border-radius: 0.5rem;
     padding: 1rem 1.25rem;
     margin-bottom: 1.75rem;
