@@ -20,6 +20,7 @@ body {
 /*---------------------------------------------Header--------------------------------------------------------*/
 .Header {
     background-color: #f0f2f5;
+    /* border: 2px dotted red; */
 }
 
 nav {
@@ -79,9 +80,6 @@ nav a:active {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hide hamburger on desktop */
-#hamburger { display: none; }
-
 /*---------------------------------------------Main--------------------------------------------------------*/
 .Main {
     display: flex;
@@ -89,6 +87,7 @@ nav a:active {
     align-items: flex-start;
     padding: 0.25rem 3rem;
     max-width: 600px;
+    /* border: 2px dotted blue; */
 }
 
 /*---------------------------------------------Contact--------------------------------------------------------*/
@@ -97,6 +96,7 @@ nav a:active {
     border: 1px solid #dde1e7;
     box-shadow: 0 4px 16px rgba(0,0,0,0.07);
     border-radius: 0.5rem;
+    /* border: 2px dotted green; */
     padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
@@ -127,12 +127,12 @@ nav a:active {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
 }
-
 .Form {
     background-color: white;
     border: 1px solid #dde1e7;
     box-shadow: 0 4px 16px rgba(0,0,0,0.07);
     border-radius: 0.5rem;
+    /* border: 2px dotted orange; */
     padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
     width: 100%;
@@ -161,6 +161,16 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 
+input[type=tel] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
 input[type=submit] {
     background-color: royalblue;
     font-family: Arial, sans-serif;
@@ -179,93 +189,11 @@ input[type=submit]:hover {
 /*---------------------------------------------Footer--------------------------------------------------------*/
 .Footer {
     text-align: center;
+    /* border: 2px dotted magenta; */
     padding: 1rem;
 }
 
 #copyright {
     font-size: 0.75rem;
     font-weight: normal;
-}
-
-/* =============================================
-   TABLET — max-width: 768px
-   ============================================= */
-@media (max-width: 768px) {
-
-    body { background: linear-gradient(160deg, royalblue 0%, #0a0a2e 100%); min-height: 100vh; }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 0.5rem;
-        padding-bottom: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        position: relative;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        background: transparent;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-        padding-top: 0.75rem;
-        gap: 0.2rem;
-    }
-
-    nav ul.open { max-height: 35rem; }
-
-    nav li { display: block; width: 100%; margin-right: 0; }
-
-    nav a {
-        width: 100%;
-        height: 4.5rem;
-        font-size: 2.25rem;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.82);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        color: royalblue;
-    }
-
-    nav a:hover { background-color: royalblue; color: white; }
-
-    .active { background-color: black !important; color: white !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
-
-    #hamburger {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        padding: 0 0.5rem;
-        line-height: 1;
-        margin-left: auto;
-    }
-
-    .Main { padding: 1rem; max-width: 100%; }
-
-    .Contact { margin-top: 0.25rem; }
-
-    .Contact h1 { color: black; }
-
-    .Footer { color: white; }
-    #copyright { color: white; font-size: 0.6rem; }
-}
-
-/* =============================================
-   MOBILE — max-width: 480px
-   ============================================= */
-@media (max-width: 480px) {
-    nav a { font-size: 1.75rem; }
 }

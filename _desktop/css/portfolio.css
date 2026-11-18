@@ -79,9 +79,6 @@ nav a:active {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hide hamburger on desktop */
-#hamburger { display: none; }
-
 /*---------------------------------------------Main--------------------------------------------------------*/
 .Main {
     display: flex;
@@ -111,33 +108,13 @@ nav a:active {
     font-family: Arial, sans-serif;
     font-size: 1.75rem;
     color: royalblue;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.25rem;
 }
 
 .CardTagline {
     color: #555;
     margin: 0 0 1.5rem;
     font-size: 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-}
-
-.CardTagline span:first-child {
-    font-size: 0.85rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #888;
-}
-
-.tagline-divider {
-    border: none;
-    border-top: 1px solid #dde1e7;
-    margin: 0.35rem 0;
-    width: 60%;
 }
 
 /*---------------------------------------------Demonstrates--------------------------------------------------------*/
@@ -232,7 +209,6 @@ nav a:active {
     letter-spacing: 0.08em;
     color: #888;
     margin: 0 0 0.75rem;
-    text-align: center;
 }
 
 .LinksGrid {
@@ -270,7 +246,6 @@ nav a:active {
     letter-spacing: 0.08em;
     color: #888;
     margin: 0 0 0.75rem;
-    text-align: center;
 }
 
 .TechGrid {
@@ -309,7 +284,6 @@ nav a:active {
     letter-spacing: 0.08em;
     color: #888;
     margin: 0 0 0.75rem;
-    text-align: center;
 }
 
 /*---------------------------------------------Buttons--------------------------------------------------------*/
@@ -328,8 +302,6 @@ nav a:active {
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
 }
 
 .button:hover {
@@ -349,17 +321,14 @@ nav a:active {
     width: 100%;
 }
 
-.RepoTable td {
-    text-align: center;
-    padding: 0.25rem 0;
-}
-
 .RepoLabel {
     font-family: Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: bold;
     color: #555;
+    padding: 0.25rem 0.5rem 0.25rem 0;
     white-space: nowrap;
+    width: 1%;
 }
 
 .RepoLink {
@@ -374,14 +343,6 @@ nav a:active {
     color: black;
 }
 
-.RepoNote {
-    font-size: 0.75rem;
-    color: #aaa;
-    text-align: center;
-    margin: 0.5rem 0 0;
-    font-style: italic;
-}
-
 /*---------------------------------------------Footer--------------------------------------------------------*/
 .FooterContainer {
     text-align: center;
@@ -391,131 +352,4 @@ nav a:active {
 #copyright {
     font-size: 0.75rem;
     font-weight: normal;
-}
-
-/* =============================================
-   TABLET — max-width: 768px
-   ============================================= */
-@media (max-width: 768px) {
-
-    body { background: linear-gradient(265deg, #0a0a2e 0%, royalblue 100%); min-height: 100vh; }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 0.5rem;
-        padding-bottom: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        position: relative;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        background: transparent;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-        padding-top: 0.75rem;
-        gap: 0.2rem;
-    }
-
-    nav ul.open { max-height: 35rem; }
-
-    nav li { display: block; width: 100%; margin-right: 0; }
-
-    nav a {
-        width: 100%;
-        height: 4.5rem;
-        font-size: 2.25rem;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.82);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        color: royalblue;
-    }
-
-    nav a:hover { background-color: royalblue; color: white; }
-
-    .active { background-color: black !important; color: white !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
-
-    #hamburger {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        padding: 0 0.5rem;
-        line-height: 1;
-        margin-left: auto;
-    }
-
-    .Main { padding: 1rem; gap: 1.5rem; }
-
-    .Card { padding: 1rem 1.25rem; max-width: 100%; }
-
-    .CardTitle { text-align: center; }
-
-    .CardTagline { text-align: center; }
-
-    .VideoWrap { flex-direction: column; }
-
-    .VideoFrame {
-        width: 100%;
-        height: auto;
-        aspect-ratio: unset;
-        overflow: visible;
-    }
-
-    .VideoFrame iframe {
-        position: static;
-        transform: none;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        display: block;
-    }
-
-    .LinksGrid2col { grid-template-columns: 1fr; }
-
-    .button { font-size: 0.75rem; padding: 0.6rem 0.75rem; }
-
-    .RepoName { display: none; }
-
-    .RepoLabel {
-        text-align: center;
-        padding: 0.5rem 0;
-    }
-
-    .RepoLabel a {
-        color: royalblue;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .RepoLabel a:hover { text-decoration: underline; }
-
-    .RepoTable { width: auto; margin: 0 auto; }
-
-    .TechGrid { grid-template-columns: repeat(3, 1fr); }
-
-    .FooterContainer { color: white; }
-    #copyright { color: white; font-size: 0.6rem; }
-}
-
-/* =============================================
-   MOBILE — max-width: 480px
-   ============================================= */
-@media (max-width: 480px) {
-    nav a { font-size: 1.75rem; }
-    .TechGrid { grid-template-columns: repeat(2, 1fr); }
 }

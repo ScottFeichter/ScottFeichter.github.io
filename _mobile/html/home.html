@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website to promote the skills of Scott Feichter">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Programming, CPU, Website, Developer, Java, C++, Guitar, Gypsy Jazz, Beatles, Flamenco, San Francisco">
+    <meta name="author" content="Scott Feichter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Feichter</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="stylesheet" href="/_mobile/css/home.css">
+</head>
+
+<!---------------------------------------------------BODY----------------------------------------------------->
+<body>
+
+<!---------------------------------------------------Header----------------------------------------------------->
+<header class="Header">
+    <nav id="site-nav">
+        <button id="hamburger" aria-label="Menu">&#9776;</button>
+        <ul>
+            <li><a href="/_mobile/html/home.html" class="active">Home</a></li>
+            <li><a href="/_mobile/html/about.html">About</a></li>
+            <li><a href="/_mobile/html/portfolio.html">Portfolio</a></li>
+            <li><a href="/_mobile/html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="page-content">
+
+<!---------------------------------------------------Content Section----------------------------------------------------->
+    <section class="ContentSection">
+
+        <div class="WelcomeContainer">
+            <h1>Scott Feichter</h1>
+            <hr id="splash_line">
+            <h2>Full Stack Software Engineer</h2>
+        </div>
+
+        <div class="PhotoContainer">
+            <img id="headshot" src="/jpg/head%20shot%20scott_f002.jpg" alt="image">
+        </div>
+
+        <div id="AudioContainer">
+            <div id="audio-play-btn" aria-label="Play greeting">
+                <svg id="icon-play" viewBox="0 0 24 24" fill="black"><polygon points="6,4 20,12 6,20"/></svg>
+                <svg id="icon-pause" viewBox="0 0 24 24" fill="black" style="display:none"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+            </div>
+            <audio id="audio">
+                <source src="/m4a/Home Greeting 11.16.26.m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!---------------------------------------------------Brevity Modal Container----------------------------------------------------->
+        <div id="brevity-modal-container">
+
+            <div id="modal-true" class="BrevityModal">
+                <p>Polonius — Lord Chamberlain of Denmark, chief counselor to the king, and a man who valued brevity in theory, if not always in&nbsp;practice...</p>
+                <div class="VideoWrapper">
+                    <iframe id="brevity-video-iframe"
+                        src=""
+                        data-src="https://www.youtube.com/embed/bSQfUqEKJ4M?enablejsapi=1&autoplay=1&rel=0"
+                        title="Brevity is the soul of wit"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="BrevityModalButtons">
+                    <button class="BrevityModalClose" id="brevity-video-close">close</button>
+                    <button class="BrevityModalClose" id="brevity-video-next">next</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+<!---------------------------------------------------Brevity Container----------------------------------------------------->
+    <section class="BrevityContainer">
+        <p id="brevity">"Brevity is the soul of wit"</p>
+        <button id="button_splash_agree" class="button">True</button>
+        <button id="button_splash_disagree" class="button">False</button>
+    </section>
+
+<!---------------------------------------------------War and Peace Card----------------------------------------------------->
+    <section id="war-peace-card">
+        <div class="Card WarPeaceCard">
+            <h2>Here is the unabridged version:</h2>
+            <hr>
+            <div class="PdfWrapper">
+                <iframe src="/pdf/war-peace.pdf#toolbar=0&zoom=100" title="War and Peace"></iframe>
+            </div>
+        </div>
+    </section>
+
+<!---------------------------------------------------Footer Container----------------------------------------------------->
+    <footer class="FooterContainer">
+        <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
+    </footer>
+    <script src="/_mobile/js/home.js"></script>
+    <script src="/_mobile/js/nav.js"></script>
+</div>
+</body>
+</html>

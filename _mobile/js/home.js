@@ -1,29 +1,3 @@
-const video = document.getElementById('videoBackground');
-const activeLink = document.querySelector('nav a.active');
-
-if (video) {
-    // Initial delay before first play
-    setTimeout(() => { video.play(); }, 3500);
-
-    video.addEventListener('play', () => {
-        setTimeout(() => {
-            activeLink.style.transition = 'color 1.5s ease';
-            activeLink.classList.add('video-playing');
-        }, 1000);
-    });
-
-    video.addEventListener('timeupdate', () => {
-        if (video.duration - video.currentTime <= 1) {
-            activeLink.style.transition = 'color 2s ease';
-            activeLink.classList.remove('video-playing');
-        }
-    });
-
-    video.addEventListener('ended', () => {
-        setTimeout(() => { video.play(); }, 10000);
-    });
-}
-
 // Mobile audio play/pause toggle
 const audioPlayBtn = document.getElementById('audio-play-btn');
 const audioPlayer = document.getElementById('audio');
@@ -52,9 +26,7 @@ if (audioPlayBtn) {
     });
 }
 
-
-
-const modalTrue  = document.getElementById('modal-true');
+const modalTrue = document.getElementById('modal-true');
 const brevityIframe = document.getElementById('brevity-video-iframe');
 
 let trueModalTimers = [];
@@ -103,19 +75,19 @@ modalTrue.addEventListener('click', (e) => {
 
 document.getElementById('brevity-video-close').addEventListener('click', () => closeVideoModal());
 document.getElementById('brevity-video-next').addEventListener('click', () => closeVideoModal(() => {
-    const aboutLink = document.querySelector('#site-nav a[href="/about"]');
+    const aboutLink = document.querySelector('#site-nav a[href="/_mobile/html/about.html"]');
     if (aboutLink) aboutLink.click();
 }));
 
 // Set PDF zoom for mobile
 const warPeaceIframe = document.querySelector('#war-peace-card iframe');
-if (warPeaceIframe && window.innerWidth <= 768) {
+if (warPeaceIframe) {
     warPeaceIframe.src = warPeaceIframe.src.replace('zoom=100', 'zoom=50');
 }
 
 const warPeaceCard = document.getElementById('war-peace-card');
-
 const falseBtn = document.getElementById('button_splash_disagree');
+
 falseBtn.addEventListener('click', () => {
     const isOpen = warPeaceCard.classList.toggle('open');
     if (isOpen) {

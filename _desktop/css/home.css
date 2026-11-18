@@ -170,16 +170,6 @@ h1 {
     margin-top: 1.5rem;
 }
 
-#AudioContainer {
-    display: flex;
-    align-items: center;
-}
-
-/* Hide custom play button on desktop */
-#audio-play-btn {
-    display: none;
-}
-
 /*---------------------------------------------BrevityContainer--------------------------------------------------------*/
 .BrevityContainer {
     /* border: 4px solid blue; */
@@ -194,7 +184,6 @@ h1 {
 }
 
 .button {
-    display: inline-flex;
     background-color: royalblue;
     font-family: Arial, sans-serif;
     font-size: 1rem;
@@ -205,6 +194,7 @@ h1 {
     border: 1px solid royalblue;
     width: 10rem;
     justify-content: center;
+    transition: 0.4s;
     cursor: pointer;
 }
 
@@ -213,10 +203,10 @@ h1 {
     color: white;
 }
 
-.button.active-state {
-    background-color: black;
-    border-color: black;
-    color: white;
+.button:active {
+    background-color: white;
+    color: royalblue;
+    transition: 0.1ms;
 }
 
 /*---------------------------------------------Modals--------------------------------------------------------*/
@@ -237,7 +227,7 @@ h1 {
     top: auto;
     left: auto;
     transform: none;
-    background-color: rgba(255, 255, 255, 0.82);
+    background-color: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     color: black;
@@ -348,11 +338,6 @@ h1 {
     color: white;
 }
 
-/* Hide hamburger on desktop */
-#hamburger {
-    display: none;
-}
-
 /*---------------------------------------------FooterContainer--------------------------------------------------------*/
 .FooterContainer {
     /* border: 4px solid magenta; */
@@ -362,255 +347,4 @@ h1 {
 #copyright {
     font-size: 0.75rem;
     font-weight: normal;
-}
-
-/* =============================================
-   TABLET — max-width: 768px
-   ============================================= */
-@media (max-width: 768px) {
-
-    #videoBackground { display: none; }
-
-    body { background: linear-gradient(160deg, royalblue 0%, #0a0a2e 100%); min-height: 100vh; }
-
-    /* Nav floats over content */
-    .Header {
-        position: relative;
-        z-index: 1000;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 0.5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        position: relative;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        background: transparent;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-        padding-top: 0.75rem;
-        gap: 0.2rem;
-    }
-
-    nav ul.open {
-        max-height: 35rem;
-    }
-
-    nav li {
-        width: 100%;
-        margin-right: 0;
-        background: transparent !important;
-    }
-
-    nav a {
-        width: 100%;
-        height: 4.5rem;
-        font-size: 2.25rem !important;
-        justify-content: center;
-        border-bottom: none;
-        background-color: rgba(255, 255, 255, 0.82);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        color: royalblue;
-    }
-
-    nav a:hover {
-        background-color: royalblue;
-        color: white;
-    }
-
-    .active {
-        background-color: black;
-        color: white;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-    }
-
-    .ContentSection {
-        flex-direction: column;
-        margin-top: 0;
-        padding: 1rem;
-    }
-
-    .LeftSpacerContainer,
-    .CenterSpacerContainer,
-    .RightSpacerContainer { display: none; }
-
-    .WelcomeContainer {
-        order: 1;
-        padding-bottom: 0;
-        text-align: center;
-        flex: none;
-        width: 100%;
-    }
-
-    .PhotoContainer {
-        order: 2;
-        width: 100%;
-        justify-content: center;
-        padding-bottom: 0;
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-
-    #AudioContainer {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        margin-top: 1rem;
-    }
-
-    #hamburger {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        padding: 0 0.5rem;
-        line-height: 1;
-        margin-left: auto;
-    }
-
-    #audio { display: none; }
-
-    #audio-play-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 3rem;
-        background-color: #f1f3f4;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: opacity 0.4s ease;
-    }
-
-    #audio-play-btn svg {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    #audio-play-btn.hidden { display: none; }
-
-    #headshot {
-        width: 40vw !important;
-        height: auto !important;
-        max-height: 60vh;
-        margin-top: 0;
-        object-fit: contain;
-    }
-
-    .WelcomeContainer h1,
-    .WelcomeContainer h2 { white-space: normal; }
-
-    .WelcomeContainer h2 { white-space: nowrap; font-size: 1.1rem; }
-
-    h1 { margin-top: 0 !important; margin-bottom: 0.2rem !important; font-size: 2.5rem !important; color: white; }
-
-    .WelcomeContainer h2 { color: white; }
-
-    #brevity { color: white; }
-
-    .FooterContainer { color: white; }
-
-    #copyright { color: white; font-size: 0.6rem; }
-
-    .WarPeaceCard .PdfWrapper {
-        width: 100%;
-        height: 60vh;
-        overflow-x: hidden;
-    }
-
-    .WarPeaceCard .PdfWrapper iframe {
-        width: 133%;
-        height: 100%;
-        border: none;
-        border-radius: 0.25rem;
-        transform: scale(0.75);
-        transform-origin: top left;
-    }
-
-    .BrevityContainer {
-        order: 4;
-        margin-bottom: 1rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    #brevity {
-        width: 100%;
-    }
-
-    #button_splash_agree, #button_splash_disagree {
-        display: inline-flex;
-        width: 8rem;
-    }
-
-    .button:hover {
-        background-color: royalblue;
-    }
-
-    .button.active-state {
-        background-color: black;
-        border-color: black;
-        color: white;
-    }
-
-    .button.active-state:hover {
-        background-color: black;
-    }
-
-    #brevity-modal-container {
-        top: 51%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90vw;
-        align-items: center;
-    }
-
-    .BrevityModal {
-        width: 90vw;
-        max-width: 90vw;
-        padding: 1.5rem;
-        font-size: 1.4rem;
-    }
-
-    .BrevityModalClose {
-        font-size: 1.3rem;
-        padding: 0.6rem 2rem;
-    }
-}
-
-/* =============================================
-   MOBILE — max-width: 480px
-   ============================================= */
-@media (max-width: 480px) {
-
-    h1 { font-size: 1.75rem; }
-
-    nav a { font-size: 1.1rem; }
-
-    #headshot {
-        width: 6rem;
-        height: 6rem;
-    }
 }

@@ -79,9 +79,6 @@ nav a:active {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hide hamburger on desktop */
-#hamburger { display: none; }
-
 /*---------------------------------------------Main--------------------------------------------------------*/
 .Main {
     display: flex;
@@ -110,7 +107,6 @@ nav a:active {
 .Card h2 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    text-align: center;
 }
 
 .VideoWrapper {
@@ -156,104 +152,4 @@ nav a:active {
 #copyright {
     font-size: 0.75rem;
     font-weight: normal;
-}
-
-/* =============================================
-   TABLET — max-width: 768px
-   ============================================= */
-@media (max-width: 768px) {
-
-    body { background: linear-gradient(160deg, royalblue 0%, #0a0a2e 100%); min-height: 100vh; }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 0.5rem;
-        padding-bottom: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        position: relative;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        background: transparent;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-        padding-top: 0.75rem;
-        gap: 0.2rem;
-    }
-
-    nav ul.open { max-height: 35rem; }
-
-    nav li { display: block; width: 100%; margin-right: 0; }
-
-    nav a {
-        width: 100%;
-        height: 4.5rem;
-        font-size: 2.25rem;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.82);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        color: royalblue;
-    }
-
-    nav a:hover { background-color: royalblue; color: white; }
-
-    .active { background-color: black !important; color: white !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
-
-    #hamburger {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        padding: 0 0.5rem;
-        line-height: 1;
-        margin-left: auto;
-    }
-
-    .Main { padding: 1rem; max-width: 100%; }
-
-    .Card { padding: 1rem 1.25rem; }
-
-    .PdfWrapper {
-        width: 100%;
-        padding-bottom: 0;
-        height: 60vh;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .PdfWrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 300%;
-        height: 300%;
-        transform: scale(0.33);
-        transform-origin: top left;
-        border: none;
-    }
-
-    .Footer { color: white; }
-    #copyright { color: white; font-size: 0.6rem; }
-}
-
-/* =============================================
-   MOBILE — max-width: 480px
-   ============================================= */
-@media (max-width: 480px) {
-    nav a { font-size: 1.75rem; }
 }

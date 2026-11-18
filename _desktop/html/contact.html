@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website to promote the skills of Scott Feichter">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Programming, CPU, Website, Developer, Java, C++, Guitar, Gypsy Jazz, Beatles, Flamenco, San Francisco">
+    <meta name="author" content="Scott Feichter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Feichter</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="stylesheet" href="/_desktop/css/contact.css">
+    <script src="/_desktop/js/contact.js"></script>
+</head>
+<!---------------------------------------------------BODY----------------------------------------------------->
+<body>
+
+<!---------------------------------------------------Nav----------------------------------------------------->
+<nav id="site-nav">
+    <ul>
+        <li><a href="/_desktop/html/home.html">Home</a></li>
+        <li><a href="/_desktop/html/about.html">About</a></li>
+        <li><a href="/_desktop/html/portfolio.html">Portfolio</a></li>
+        <li><a href="/_desktop/html/contact.html" class="active">Contact</a></li>
+    </ul>
+</nav>
+
+<!---------------------------------------------------Page Content----------------------------------------------------->
+<div id="page-content">
+
+    <main class="Main">
+
+        <div class="Contact">
+            <h1>Contact Me</h1>
+            <hr>
+            <h3><a href="tel:4157028512">415-702-8512</a></h3>
+            <h3><a href="mailto:scottfeichter@gmail.com">scottfeichter@gmail.com</a></h3>
+        </div>
+
+        <div class="Form" id="contact-form-card">
+            <h2 id="form-heading">Send a Message</h2>
+            <form id="contact-form" action="https://formspree.io/f/mnpdpwok" method="POST">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Your name..">
+
+                <label for="reason">Subject</label>
+                <input type="text" id="reason" name="subject" placeholder="Subject..">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something..&#10;&#10;Note: If you don't leave any contact information in the message I won't be able to reply." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+            <div id="form-success" style="display:none; text-align:center; padding: 2rem 0;">
+                <h2 style="font-size: 1.6rem; font-weight: 600;">Message successfully sent!</h2>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="Footer">
+        <h3 id="copyright">Copyright &copy; Scott Feichter 2027</h3>
+    </footer>
+
+</div>
+
+<script src="/_desktop/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(160deg, royalblue 0%, #0a0a2e 100%);
+    min-height: 100vh;
+}
+
+#site-nav {
+}
+
+#page-content {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*---------------------------------------------Nav--------------------------------------------------------*/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-top: 0.75rem;
+    gap: 0.2rem;
+    margin: 0;
+    padding-left: 0;
+}
+
+nav ul.open { max-height: 35rem; }
+
+nav li { display: block; width: 100%; margin-right: 0; }
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 1;
+    width: 100%;
+    height: 4.5rem;
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: royalblue;
+}
+
+nav a:hover { background-color: royalblue; color: white; }
+
+.active { background-color: black; color: white; backdrop-filter: none; -webkit-backdrop-filter: none; }
+
+#hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    line-height: 1;
+    margin-left: auto;
+}
+
+/*---------------------------------------------Main--------------------------------------------------------*/
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+/*---------------------------------------------Contact--------------------------------------------------------*/
+.Contact {
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.25rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Contact h1 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.Contact h3 { font-weight: 600; }
+
+.Contact h3 a {
+    color: royalblue;
+    text-decoration: none;
+}
+
+.Contact h3 a:hover { text-decoration: underline; }
+
+.Contact hr {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.Form {
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: min-height 0.5s ease;
+}
+
+.Form h2 {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+input, select, textarea, ::placeholder {
+    font-family: Arial, sans-serif;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: royalblue;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type=submit]:hover { background-color: black; }
+
+/*---------------------------------------------Footer--------------------------------------------------------*/
+.Footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+#copyright {
+    font-size: 0.6rem;
+    font-weight: normal;
+    color: white;
+}

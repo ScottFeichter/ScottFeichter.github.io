@@ -1,0 +1,387 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(160deg, royalblue 0%, #0a0a2e 100%);
+    min-height: 100vh;
+}
+
+#site-nav {
+}
+
+#page-content {
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/*---------------------------------------------Header--------------------------------------------------------*/
+.Header {
+    position: relative;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-top: 0.75rem;
+    gap: 0.2rem;
+    margin: 0;
+    padding-left: 0;
+}
+
+nav ul.open {
+    max-height: 35rem;
+}
+
+nav li {
+    width: 100%;
+    margin-right: 0;
+    background: transparent !important;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 1;
+    width: 100%;
+    height: 4.5rem;
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: royalblue;
+    border-bottom: none;
+}
+
+nav a:hover {
+    background-color: royalblue;
+    color: white;
+}
+
+.active {
+    background-color: black;
+    color: white;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+#hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    line-height: 1;
+    margin-left: auto;
+}
+
+/*---------------------------------------------ContentSection--------------------------------------------------------*/
+.ContentSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 1rem;
+}
+
+/*---------------------------------------------WelcomeContainer--------------------------------------------------------*/
+.WelcomeContainer {
+    order: 1;
+    text-align: center;
+    flex: none;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.WelcomeContainer h1 { white-space: normal; }
+
+.WelcomeContainer h2 {
+    white-space: nowrap;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: white;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+/*---------------------------------------------PhotoContainer--------------------------------------------------------*/
+.PhotoContainer {
+    order: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+#headshot {
+    width: 40vw;
+    height: auto;
+    max-height: 60vh;
+    margin-top: 0;
+    object-fit: contain;
+}
+
+/*---------------------------------------------AudioContainer--------------------------------------------------------*/
+#AudioContainer {
+    order: 3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#audio { display: none; }
+
+#audio-play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 3rem;
+    background-color: #f1f3f4;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+}
+
+#audio-play-btn svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+#audio-play-btn.hidden { display: none; }
+
+/*---------------------------------------------BrevityContainer--------------------------------------------------------*/
+.BrevityContainer {
+    order: 4;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#brevity {
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.button {
+    display: inline-flex;
+    background-color: royalblue;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid royalblue;
+    width: 8rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: royalblue;
+}
+
+.button.active-state {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+.button.active-state:hover {
+    background-color: black;
+}
+
+/*---------------------------------------------Modals--------------------------------------------------------*/
+#brevity-modal-container {
+    position: fixed;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 99999;
+    pointer-events: none;
+    width: 90vw;
+}
+
+.BrevityModal {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 90vw;
+    max-width: 90vw;
+    z-index: 99999;
+    cursor: default;
+    pointer-events: auto;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.8), 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.BrevityModal p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.BrevityModal .VideoWrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-top: 1rem;
+}
+
+.BrevityModal .VideoWrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.BrevityModal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.BrevityModalButtons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.BrevityModalClose {
+    display: block;
+    background: none;
+    border: 1px solid black;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    padding: 0.6rem 2rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.BrevityModalClose:hover {
+    background-color: black;
+    color: white;
+}
+
+/*---------------------------------------------War and Peace Card--------------------------------------------------------*/
+#war-peace-card {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+#war-peace-card.open {
+    max-height: 120vh;
+}
+
+.WarPeaceCard {
+    background-color: white;
+    border: 1px solid #dde1e7;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    margin: 0 2rem 2rem;
+    box-sizing: border-box;
+}
+
+.WarPeaceCard h2 {
+    margin-top: 0;
+    font-style: italic;
+    color: royalblue;
+    text-align: center;
+}
+
+.WarPeaceCard .PdfWrapper {
+    width: 100%;
+    height: 60vh;
+    overflow-x: hidden;
+}
+
+.WarPeaceCard .PdfWrapper iframe {
+    width: 133%;
+    height: 100%;
+    border: none;
+    border-radius: 0.25rem;
+    transform: scale(0.75);
+    transform-origin: top left;
+}
+
+/*---------------------------------------------FooterContainer--------------------------------------------------------*/
+.FooterContainer {
+    text-align: center;
+    color: white;
+}
+
+#copyright {
+    font-size: 0.6rem;
+    font-weight: normal;
+    color: white;
+}
