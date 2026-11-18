@@ -1,37 +1,58 @@
 const video = document.getElementById('videoBackground');
 const activeLink = document.querySelector('nav a.active');
 
-// Initial delay before first play
-setTimeout(() => {
-    video.play();
-}, 3500);
+if (video) {
+    // Initial delay before first play
+    setTimeout(() => { video.play(); }, 3500);
 
-// When video starts playing, transition active text to white (1.5s)
-video.addEventListener('play', () => {
-    setTimeout(() => {
-        activeLink.style.transition = 'color 1.5s ease';
-        activeLink.classList.add('video-playing');
-    }, 1000);
-});
+    video.addEventListener('play', () => {
+        setTimeout(() => {
+            activeLink.style.transition = 'color 1.5s ease';
+            activeLink.classList.add('video-playing');
+        }, 1000);
+    });
 
-// Fade text back to royalblue 1 second before video ends (2s duration)
-video.addEventListener('timeupdate', () => {
-    if (video.duration - video.currentTime <= 1) {
-        activeLink.style.transition = 'color 2s ease';
-        activeLink.classList.remove('video-playing');
+    video.addEventListener('timeupdate', () => {
+        if (video.duration - video.currentTime <= 1) {
+            activeLink.style.transition = 'color 2s ease';
+            activeLink.classList.remove('video-playing');
+        }
+    });
+
+    video.addEventListener('ended', () => {
+        setTimeout(() => { video.play(); }, 10000);
+    });
+}
+
+// Mobile audio play/pause toggle
+const audioPlayBtn = document.getElementById('audio-play-btn');
+const audioPlayer = document.getElementById('audio');
+const iconPlay = document.getElementById('icon-play');
+const iconPause = document.getElementById('icon-pause');
+
+function setAudioPlaying(playing) {
+    if (playing) {
+        audioPlayer.play();
+        if (iconPlay) iconPlay.style.display = 'none';
+        if (iconPause) iconPause.style.display = 'block';
+    } else {
+        audioPlayer.pause();
+        if (iconPlay) iconPlay.style.display = 'block';
+        if (iconPause) iconPause.style.display = 'none';
     }
-});
+}
 
-// When video ends, wait 10 seconds then replay
-video.addEventListener('ended', () => {
-    setTimeout(() => {
-        video.play();
-    }, 10000);
-});
+if (audioPlayBtn) {
+    audioPlayBtn.addEventListener('click', () => {
+        setAudioPlaying(audioPlayer.paused);
+    });
+    audioPlayer.addEventListener('ended', () => {
+        if (iconPlay) iconPlay.style.display = 'block';
+        if (iconPause) iconPause.style.display = 'none';
+    });
+}
 
-// ============================================================
-// BREVITY MODALS
-// ============================================================
+
 
 const modalTrue  = document.getElementById('modal-true');
 const brevityIframe = document.getElementById('brevity-video-iframe');
@@ -71,7 +92,7 @@ ytScript.src = 'https://www.youtube.com/iframe_api';
 document.head.appendChild(ytScript);
 
 document.getElementById('button_splash_agree').addEventListener('click', () => {
-    if (!audioPlayer.paused) audioPlayer.pause();
+    if (!audioPlayer.paused) setAudioPlaying(false);
     modalTrue.classList.add('visible');
     brevityIframe.src = brevityIframe.dataset.src;
 });
@@ -86,11 +107,23 @@ document.getElementById('brevity-video-next').addEventListener('click', () => cl
     if (aboutLink) aboutLink.click();
 }));
 
-const warPeaceCard = document.getElementById('war-peace-card');
-const audioPlayer = document.getElementById('audio');
+// Set PDF zoom for mobile
+const warPeaceIframe = document.querySelector('#war-peace-card iframe');
+if (warPeaceIframe && window.innerWidth <= 768) {
+    warPeaceIframe.src = warPeaceIframe.src.replace('zoom=100', 'zoom=50');
+}
 
-document.getElementById('button_splash_disagree').addEventListener('click', () => {
-    warPeaceCard.classList.toggle('open');
-    audioPlayer.currentTime = 0;
-    audioPlayer.play();
+const warPeaceCard = document.getElementById('war-peace-card');
+
+const falseBtn = document.getElementById('button_splash_disagree');
+falseBtn.addEventListener('click', () => {
+    const isOpen = warPeaceCard.classList.toggle('open');
+    if (isOpen) {
+        audioPlayer.currentTime = 0;
+        setAudioPlaying(true);
+        falseBtn.classList.add('active-state');
+    } else {
+        setAudioPlaying(false);
+        falseBtn.classList.remove('active-state');
+    }
 });

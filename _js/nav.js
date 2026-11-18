@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navUl = document.querySelector('#site-nav ul');
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navUl.classList.toggle('open');
+        });
+    }
+
     const activeLink = document.querySelector('#site-nav a.active');
     const isHome = !!document.getElementById('videoBackground');
     const navigatedTo = sessionStorage.getItem('navigatedTo');

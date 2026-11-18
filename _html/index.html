@@ -21,6 +21,7 @@
 <!---------------------------------------------------Header----------------------------------------------------->
 <header class="Header">
     <nav id="site-nav">
+        <button id="hamburger" aria-label="Menu">&#9776;</button>
         <ul>
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -47,13 +48,20 @@
             <h1>Scott Feichter</h1>
             <hr id="splash_line">
             <h2>Full Stack Software Engineer</h2>
+        </div>
+
+        <div class="RightSpacerContainer"></div>
+
+        <div id="AudioContainer">
+            <div id="audio-play-btn" aria-label="Play greeting">
+                <svg id="icon-play" viewBox="0 0 24 24" fill="black"><polygon points="6,4 20,12 6,20"/></svg>
+                <svg id="icon-pause" viewBox="0 0 24 24" fill="black" style="display:none"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+            </div>
             <audio id="audio" controls>
                 <source src="/m4a/Home Greeting 11.16.26.m4a" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
-
-        <div class="RightSpacerContainer"></div>
 
         <!---------------------------------------------------Brevity Modal Container----------------------------------------------------->
         <div id="brevity-modal-container">
