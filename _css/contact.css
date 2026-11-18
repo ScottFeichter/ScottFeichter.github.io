@@ -265,6 +265,8 @@ input[type=submit]:hover {
 
     .Main { padding: 1rem; max-width: 100%; }
 
+    .Contact { margin-top: 0.25rem; }
+
     .Contact h1 { color: black; }
 
     .Footer { color: white; }
