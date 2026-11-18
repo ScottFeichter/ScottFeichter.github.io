@@ -194,6 +194,7 @@ h1 {
 }
 
 .button {
+    display: inline-flex;
     background-color: royalblue;
     font-family: Arial, sans-serif;
     font-size: 1rem;
@@ -546,6 +547,20 @@ h1 {
     .BrevityContainer {
         order: 4;
         margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #brevity {
+        width: 100%;
+    }
+
+    #button_splash_agree, #button_splash_disagree {
+        display: inline-flex;
+        width: 8rem;
     }
 
     .button:hover {

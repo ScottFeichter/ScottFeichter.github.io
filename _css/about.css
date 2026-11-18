@@ -210,7 +210,7 @@ nav a:active {
 
     nav a:hover { background-color: royalblue; color: white; }
 
-    .active { background-color: black; color: white; backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .active { background-color: black !important; color: white !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
 
     #hamburger {
         display: block;
