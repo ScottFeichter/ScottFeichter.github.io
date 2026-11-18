@@ -111,13 +111,33 @@ nav a:active {
     font-family: Arial, sans-serif;
     font-size: 1.75rem;
     color: royalblue;
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.5rem;
 }
 
 .CardTagline {
     color: #555;
     margin: 0 0 1.5rem;
     font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.CardTagline span:first-child {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+}
+
+.tagline-divider {
+    border: none;
+    border-top: 1px solid #dde1e7;
+    margin: 0.35rem 0;
+    width: 60%;
 }
 
 /*---------------------------------------------Demonstrates--------------------------------------------------------*/
@@ -212,6 +232,7 @@ nav a:active {
     letter-spacing: 0.08em;
     color: #888;
     margin: 0 0 0.75rem;
+    text-align: center;
 }
 
 .LinksGrid {
@@ -249,6 +270,7 @@ nav a:active {
     letter-spacing: 0.08em;
     color: #888;
     margin: 0 0 0.75rem;
+    text-align: center;
 }
 
 .TechGrid {
@@ -287,6 +309,7 @@ nav a:active {
     letter-spacing: 0.08em;
     color: #888;
     margin: 0 0 0.75rem;
+    text-align: center;
 }
 
 /*---------------------------------------------Buttons--------------------------------------------------------*/
@@ -305,6 +328,8 @@ nav a:active {
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .button:hover {
@@ -324,14 +349,17 @@ nav a:active {
     width: 100%;
 }
 
+.RepoTable td {
+    text-align: center;
+    padding: 0.25rem 0;
+}
+
 .RepoLabel {
     font-family: Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: bold;
     color: #555;
-    padding: 0.25rem 0.5rem 0.25rem 0;
     white-space: nowrap;
-    width: 1%;
 }
 
 .RepoLink {
@@ -344,6 +372,14 @@ nav a:active {
 .RepoLink:hover {
     text-decoration: underline;
     color: black;
+}
+
+.RepoNote {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: center;
+    margin: 0.5rem 0 0;
+    font-style: italic;
 }
 
 /*---------------------------------------------Footer--------------------------------------------------------*/
@@ -362,7 +398,7 @@ nav a:active {
    ============================================= */
 @media (max-width: 768px) {
 
-    body { background: linear-gradient(160deg, royalblue 0%, #0a0a2e 100%); min-height: 100vh; }
+    body { background: linear-gradient(265deg, #0a0a2e 0%, royalblue 100%); min-height: 100vh; }
 
     nav {
         display: flex;
@@ -427,9 +463,48 @@ nav a:active {
 
     .Card { padding: 1rem 1.25rem; max-width: 100%; }
 
+    .CardTitle { text-align: center; }
+
+    .CardTagline { text-align: center; }
+
     .VideoWrap { flex-direction: column; }
 
+    .VideoFrame {
+        width: 100%;
+        height: auto;
+        aspect-ratio: unset;
+        overflow: visible;
+    }
+
+    .VideoFrame iframe {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        display: block;
+    }
+
     .LinksGrid2col { grid-template-columns: 1fr; }
+
+    .button { font-size: 0.75rem; padding: 0.6rem 0.75rem; }
+
+    .RepoName { display: none; }
+
+    .RepoLabel {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .RepoLabel a {
+        color: royalblue;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .RepoLabel a:hover { text-decoration: underline; }
+
+    .RepoTable { width: auto; margin: 0 auto; }
 
     .TechGrid { grid-template-columns: repeat(3, 1fr); }
 
