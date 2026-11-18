@@ -110,6 +110,7 @@ nav a:active {
 .Card h2 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .VideoWrapper {
@@ -227,7 +228,24 @@ nav a:active {
 
     .Card { padding: 1rem 1.25rem; }
 
-    .PdfWrapper { display: none; }
+    .PdfWrapper {
+        width: 100%;
+        padding-bottom: 0;
+        height: 60vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .PdfWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%;
+        height: 300%;
+        transform: scale(0.33);
+        transform-origin: top left;
+        border: none;
+    }
 
     .Footer { color: white; }
     #copyright { color: white; font-size: 0.6rem; }
