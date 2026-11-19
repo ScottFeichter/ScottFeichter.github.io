@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initNav() {
 
     const activeLink = document.querySelector('#site-nav a.active');
     const isHome = !!document.getElementById('videoBackground');
@@ -49,4 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+} else {
+    initNav();
+}

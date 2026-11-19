@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initNav() {
 
     // Hamburger toggle
     const hamburger = document.getElementById('hamburger');
@@ -54,4 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+} else {
+    initNav();
+}
