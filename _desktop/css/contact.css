@@ -85,7 +85,7 @@ nav a:active {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.25rem 1rem;
+    padding: 1.25rem 1rem;
     max-width: 600px;
     /* border: 2px dotted blue; */
 }
@@ -99,7 +99,6 @@ nav a:active {
     /* border: 2px dotted green; */
     padding: 1.5rem 2rem 1rem 2rem;
     margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
