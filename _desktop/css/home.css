@@ -1,3 +1,35 @@
+/*
+================================================================================================================
+    DEVELOPER NOTES — home.css is not the complete picture for nav and home button appearance.
+    Read this before making changes to nav or .currentPage styles.
+================================================================================================================
+
+    NAV BUTTON APPEARANCE — SPLIT ACROSS THREE FILES:
+
+    1. home.css (this file)
+       — Base styles for all nav buttons: nav a, nav a:hover, nav a:focus, nav a:active (CSS pseudo-class)
+       — .currentPage class: marks the Home button as the current page (transparent bg, royalblue text)
+       — .currentPage.video-playing class: sets Home button text to white when video is playing
+       — NOTE: nav a:active is the CSS pseudo-class (mousedown state), NOT the same as .currentPage
+
+    2. home.js
+       — Controls the transition speed and timing of the Home button color as the video plays/ends
+       — video 'play' event: waits 1s then sets transition 'color 1.5s ease' and adds .video-playing
+         → Home button text slowly transitions royalblue → white as video plays
+       — video 'timeupdate' event: when 1s from end, sets transition 'color 2s ease' and removes .video-playing
+         → Home button text slowly transitions white → royalblue before video ends
+       — Transition speeds are set in JS (not CSS) because adding and removing .video-playing
+         require DIFFERENT durations — CSS cannot specify different speeds per direction on a class toggle
+
+    3. nav.js
+       — On page load: if navigated here via a nav click, animates .currentPage button
+         from click state (white bg, black text) back to its resting state (transparent bg, royalblue text)
+       — On nav click: transitions .currentPage button to royalblue bg/white text before navigating away
+
+================================================================================================================
+*/
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -84,13 +116,13 @@ nav a:active {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.currentPage {
+.currentPageHome {
     background-color: transparent;
     color: royalblue;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.currentPage.video-playing {
+.currentPageHome.video-playing {
     color: white;
 }
 
