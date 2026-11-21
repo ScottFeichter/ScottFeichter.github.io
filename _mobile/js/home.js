@@ -91,11 +91,10 @@ const falseBtn = document.getElementById('button_splash_disagree');
 falseBtn.addEventListener('click', () => {
     const isOpen = warPeaceCard.classList.toggle('open');
     if (isOpen) {
-        audioPlayer.currentTime = 0;
         setAudioPlaying(true);
         falseBtn.classList.add('active-state');
     } else {
-        setAudioPlaying(false);
+        if (!audioPlayer.paused) setAudioPlaying(false);
         falseBtn.classList.remove('active-state');
     }
 });
