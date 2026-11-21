@@ -1,5 +1,5 @@
 const video = document.getElementById('videoBackground');
-const activeLink = document.querySelector('nav a.active');
+const activeLink = document.querySelector('nav a.currentPage');
 
 // Initial delay before first play
 setTimeout(() => {

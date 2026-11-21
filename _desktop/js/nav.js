@@ -1,6 +1,6 @@
 function initNav() {
 
-    const activeLink = document.querySelector('#site-nav a.active');
+    const activeLink = document.querySelector('#site-nav a.currentPage');
     const isHome = !!document.getElementById('videoBackground');
     const navigatedTo = sessionStorage.getItem('navigatedTo');
 

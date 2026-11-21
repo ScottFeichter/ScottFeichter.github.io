@@ -73,7 +73,7 @@ nav a {
 
 nav a:hover { background-color: royalblue; color: white; }
 
-.active { background-color: black; color: white; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.currentPage { background-color: black; color: white; backdrop-filter: none; -webkit-backdrop-filter: none; }
 
 #hamburger {
     display: block;

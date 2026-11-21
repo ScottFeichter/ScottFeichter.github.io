@@ -9,7 +9,7 @@ function initNav() {
         });
     }
 
-    const activeLink = document.querySelector('#site-nav a.active');
+    const activeLink = document.querySelector('#site-nav a.currentPage');
     const navigatedTo = sessionStorage.getItem('navigatedTo');
 
     // On page load — animate active button from click state to active
