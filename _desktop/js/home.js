@@ -92,7 +92,10 @@ const warPeaceCard = document.getElementById('war-peace-card');
 const audioPlayer = document.getElementById('audio');
 
 document.getElementById('button_splash_disagree').addEventListener('click', () => {
-    warPeaceCard.classList.toggle('open');
-    audioPlayer.currentTime = 0;
-    audioPlayer.play();
+    const isOpen = warPeaceCard.classList.toggle('open');
+    if (isOpen) {
+        audioPlayer.play();
+    } else {
+        if (!audioPlayer.paused) audioPlayer.pause();
+    }
 });
