@@ -93,7 +93,7 @@ nav a:hover { background-color: royalblue; color: white; }
     font-size: 1.15rem;
     font-weight: bold;
     padding-top: 0.15rem;
-}}
+}
 .Main {
     display: flex;
     flex-direction: column;
