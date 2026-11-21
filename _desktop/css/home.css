@@ -18,6 +18,8 @@
          → Home button text slowly transitions royalblue → white as video plays
        — video 'timeupdate' event: when 1s from end, sets transition 'color 2s ease' and removes .video-playing
          → Home button text slowly transitions white → royalblue before video ends
+       — After the 2s fade completes, inline style is cleared via setTimeout so CSS .currentPage
+         transition takes back control of hover behavior
        — Transition speeds are set in JS (not CSS) because adding and removing .video-playing
          require DIFFERENT durations — CSS cannot specify different speeds per direction on a class toggle
 
@@ -116,13 +118,13 @@ nav a:active {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.currentPageHome {
+.currentPage {
     background-color: transparent;
     color: royalblue;
-    transition: background-color 0.3s ease, color 0.05s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.currentPageHome.video-playing {
+.currentPage.video-playing {
     color: white;
 }
 

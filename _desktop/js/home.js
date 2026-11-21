@@ -1,5 +1,5 @@
 const video = document.getElementById('videoBackground');
-const activeLink = document.querySelector('nav a.currentPageHome');
+const activeLink = document.querySelector('nav a.currentPage');
 
 // Initial delay before first play
 setTimeout(() => {
@@ -19,6 +19,8 @@ video.addEventListener('timeupdate', () => {
     if (video.duration - video.currentTime <= 1) {
         activeLink.style.transition = 'color 2s ease';
         activeLink.classList.remove('video-playing');
+        // After fade completes, clear inline style so CSS .currentPage transition controls hover
+        setTimeout(() => { activeLink.style.transition = ''; }, 2000);
     }
 });
 
